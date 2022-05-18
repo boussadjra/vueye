@@ -10,6 +10,8 @@ declare module '@vue/runtime-core' {
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    VHeader: typeof import('./components/app/layout/VHeader.vue')['default']
+    VSidebar: typeof import('./components/app/layout/VSidebar.vue')['default']
   }
 }
 

@@ -1,3 +1,5 @@
 {
-  "extends": "@antfu"
+  "extends": [
+    "plugin:vue/vue3-recommended"
+  ]
 }

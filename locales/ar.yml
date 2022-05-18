@@ -12,3 +12,10 @@ intro:
   aka: معروف أيضا تحت مسمى
   whats-your-name: ما إسمك؟
 not-found: صفحة غير موجودة
+sidebar:
+  dashboard: لوحة القيادة
+  components: المكونات
+  team: الفريق
+  projects: المشاريع
+  calendar: التقويم
+  reports: التقارير

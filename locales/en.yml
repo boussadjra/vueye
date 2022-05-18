@@ -12,3 +12,10 @@ intro:
   aka: Also known as
   whats-your-name: What's your name?
 not-found: Not found
+sidebar:
+  dashboard: Dashboard
+  components: Components
+  team: Team
+  projects: Projects
+  calendar: Calendar
+  reports: Reports
