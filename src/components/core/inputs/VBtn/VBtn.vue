@@ -1,0 +1,123 @@
+
+
+<script setup lang="ts">
+/**
+ * button component
+ * @displayName VBtn
+ */
+
+import { cornerProps, useCorner } from '~/composables/core/corner';
+import { loadingProps, useLoading } from '~/composables/core/loading';
+import appendProps from '~/composables/core/props/appendProps';
+import blockProps from '~/composables/core/props/blockProps';
+import disabledProps from '~/composables/core/props/disabledProps';
+import linkProps from '~/composables/core/props/linkProps';
+
+import outlinedProps from '~/composables/core/props/outlinedProps';
+import smoothProps from '~/composables/core/props/smoothProps';
+import tagProps from '~/composables/core/props/tagProps';
+import textProps from '~/composables/core/props/textProps';
+import { sizeProps, useSize } from '~/composables/core/size';
+import useVariant, { variantProps } from '~/composables/core/variant';
+import { toPartialRefs } from '~/utils/helpers';
+
+
+const props = defineProps({
+   ...tagProps,
+   ...variantProps,
+   ...sizeProps,
+   ...blockProps,
+   ...outlinedProps,
+   ...smoothProps,
+   ...textProps,
+   ...linkProps,
+   ...appendProps,
+   ...loadingProps,
+   ...cornerProps,
+   ...disabledProps,
+   tag: {
+      default: 'button',
+   },
+
+
+})
+
+
+const { variantClasses, variantStyle } = useVariant(toPartialRefs(props, ['variant', 'bgColor', 'textColor']))
+const { sizeClasses } = useSize(toPartialRefs(props, ['size']))
+const { loadingClass } = useLoading(toPartialRefs(props, ['loading']))
+const {cornerClass} =useCorner(toPartialRefs(props,['corner']))
+
+
+const classes = computed(() => [
+   'btn  space-x-2',
+   variantClasses.value, 
+   sizeClasses.value, 
+   cornerClass.value,
+   props.block ? 'w-full' : 'w-max',
+   {
+      'outlined': props.outlined,
+      'smooth': props.smooth,
+      'text': props.text || props.link,
+      'link': props.link,
+      'disabled':props.disabled
+   },
+])
+
+
+
+const currentTag = computed(() => props.link ? 'a' : props.tag)
+
+</script>
+
+<template>
+   <component :is="currentTag" :class="classes" :style="variantStyle" >
+      <slot name="prepend">
+         <span v-if="prepend" :class="`prepend ${prepend}`" />
+      </slot>
+
+      <span i-carbon-circle-dash v-if="loading" :class="loadingClass" />
+      <slot v-else />
+
+      <slot name="append">
+         <component v-if="append" :class="`append ${append}`" />
+      </slot>
+   </component>
+</template>
+
+
+<style scoped>
+.btn {
+   @apply h-max flex justify-center shadow-md hover:shadow items-center  transition-colors duration-300 cursor-pointer capitalize
+}
+.btn.disabled{
+@apply bg-gray-400 cursor-not-allowed shadow-none 
+}
+
+.btn:not(.text) {
+   @apply text-white
+}
+
+.btn.xs {
+   @apply px-4 py-1 text-xs
+}
+
+.btn.sm {
+   @apply px-6 py-2 text-sm
+}
+
+.btn.md {
+   @apply px-8 py-2 text-base min-h-[40px]
+}
+
+.btn.lg {
+   @apply px-10 py-3 text-xl
+}
+
+ .btn .prepend{
+@apply mr-2 rtl:ml-2 rtl:mr-0
+}
+ .btn .append{
+@apply ml-2 rtl:mr-2 rtl:ml-0
+}
+</style>

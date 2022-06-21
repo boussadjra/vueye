@@ -1,5 +1,10 @@
 @import './markdown.css';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 html,
 body,
 #app {
@@ -16,6 +21,9 @@ html.dark {
   pointer-events: none;
 }
 
+.prose{
+margin-bottom:40px;
+}
 #nprogress .bar {
   background: rgb(13,148,136);
   opacity: 0.75;
@@ -26,3 +34,129 @@ html.dark {
   width: 100%;
   height: 2px;
 }
+
+/*******************
+********************
+***** variants *****
+********************
+*******************/
+
+.primary {
+  @apply bg-primary-500  hover:bg-primary-600 
+}
+.default{
+ @apply  bg-slate-500 hover:bg-slate-600 
+}
+.secondary {
+  @apply bg-secondary-500 hover:bg-secondary-600
+}
+
+.info {
+  @apply bg-blue-500 hover:bg-blue-600
+}
+.warning {
+  @apply bg-amber-500 hover:bg-amber-600
+}
+.error {
+  @apply bg-red-500 hover:bg-red-600
+}
+.success {
+  @apply bg-green-500 hover:bg-green-600
+}
+.default {
+  @apply bg-gray-500 hover:bg-gray-600
+}  
+
+/**** outlined ****/
+.outlined {
+  @apply border-2 bg-transparent hover:bg-transparent
+}
+.primary.outlined {
+  @apply border-primary-500   text-primary-500 hover:!border-primary-600 hover:!text-primary-600 dark:text-primary-400
+}
+.secondary.outlined {
+  @apply border-secondary-500 !text-secondary-500 hover:!border-secondary-600 hover:!text-secondary-600
+}
+.info.outlined {
+  @apply border-blue-500 !text-blue-500 hover:!border-blue-600 hover:!text-blue-600
+}
+.warning.outlined {
+  @apply border-amber-500 !text-amber-500 hover:!border-amber-600 hover:!text-amber-600
+}
+.error.outlined {
+  @apply border-red-500 !text-red-500 hover:!border-red-600 hover:!text-red-600
+}
+.success.outlined {
+  @apply border-green-500 !text-green-500 hover:!border-green-600 hover:!text-green-600
+}
+.default.outlined {
+  @apply border-gray-500 !text-gray-500 hover:!border-gray-600 hover:!text-gray-600
+}
+
+/**** smooth ****/
+
+.primary.smooth {
+  @apply bg-primary-200 hover:bg-primary-300 !text-primary-500 hover:!text-primary-600
+}
+.secondary.smooth {
+  @apply bg-secondary-200 hover:bg-secondary-300 !text-secondary-500 hover:!text-secondary-600
+}
+.info.smooth {
+  @apply bg-blue-200 hover:bg-blue-300 !text-blue-500 hover:!text-blue-600
+}
+.warning.smooth {
+  @apply bg-amber-200 hover:bg-amber-300 !text-amber-500 hover:!text-amber-600
+}
+.error.smooth {
+  @apply bg-red-200 hover:bg-red-300 !text-red-500 hover:!text-red-600
+}
+.success.smooth {
+  @apply bg-green-200 hover:bg-green-300 !text-green-500 hover:!text-green-600
+}
+.default.smooth {
+  @apply bg-gray-200 hover:bg-gray-300 !text-gray-500 hover:!text-gray-600
+}
+
+/***** text *****/
+
+.text{
+  @apply bg-transparent hover:border hover:bg-transparent !shadow-none
+}
+.text.primary {
+  @apply text-primary-500 hover:text-primary-600 hover:border-primary-100
+}
+.text.secondary {
+  @apply text-secondary-500 hover:text-secondary-600 hover:border-secondary-200
+}
+.text.info {
+  @apply text-blue-500 hover:text-blue-600 hover:border-blue-200
+}
+.text.warning {
+  @apply text-amber-500 hover:text-amber-600 hover:border-amber-200
+}
+.text.error {
+  @apply text-red-500 hover:text-red-600 hover:border-red-200
+}
+.text.success {
+  @apply text-green-500 hover:text-green-600 hover:border-green-200
+}
+.text.default {
+  @apply text-gray-500 hover:text-gray-600 hover:border-gray-200
+}
+
+
+/***** link *****/
+
+.link{
+  @apply bg-transparent !no-underline hover:!underline hover:underline-offset-2 hover:!bg-transparent hover:border-0 
+}
+
+
+
+
+
+
+
+
+
+

@@ -1,21 +1,11 @@
 
 
 <script setup lang="ts">
-import useEventsBus from '~/composables/core/eventBus';
 
-const { bus } = useEventsBus()
-
-watch(()=>bus.value.get('test'), (val) => {
-    console.log('---dashboard index-----------------')
-    console.log(val)
-    console.log('--------------------')
- 
-
-})
 </script>
 <template>
-    <div>
-        dashboard page
+    <div class="pt-4">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium et, aliquam perferendis magni, accusamus cumque quaerat sequi, minus veniam ratione sunt facilis eaque voluptates quae! Consectetur optio fugit vitae amet?
     </div>
 </template>
 <style scoped>

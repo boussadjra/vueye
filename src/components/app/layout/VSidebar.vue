@@ -16,7 +16,7 @@ const currentIndex = ref(-1);
 function setCurrentIndex(index: number) {
     currentIndex.value = index === currentIndex.value ? -1 : index
 }
-const sidebarItems = [
+const sidebarItems = computed(()=>[
     {
         title: t('sidebar.dashboard'),
         icon: 'i-carbon-dashboard',
@@ -27,16 +27,17 @@ const sidebarItems = [
         icon: 'i-carbon-assembly-cluster',
         path: '/components/buttons',
         children: [
+               {
+                title: 'Alerts',
+                path: '/components/alerts'
+
+
+            },
             {
                 title: 'Buttons',
                 path: '/components/buttons'
             },
-            {
-                title: 'Cards',
-                path: '/components/cards'
-
-
-            },
+         
         ]
     },
     {
@@ -60,12 +61,12 @@ const sidebarItems = [
         path: '/reports'
     },
 
-]
+])
 </script>
 <template>
     <!-- sidebar -->
     <aside
-        :class="`${sidebarCollapsed ? 'md:w-16' : 'md:w-64'} bg-primary-600 dark:bg-primary-700 transition-width duration-700 w-full top-0 md:fixed bottom-0 z-30 flex-shrink-0   overflow-y-auto  lg:block`">
+        :class="`${sidebarCollapsed ? 'md:w-16 collapsed' : 'md:w-64'} sidebar bg-primary-600 dark:bg-primary-700 transition-width duration-700 w-full top-0 md:fixed bottom-0 z-30 flex-shrink-0   overflow-y-auto  lg:block`">
         <div class='flex flex-col h-full'>
             <div class='flex items-center justify-center h-16 text-5xl bg-primary-900 '>
 
@@ -89,10 +90,10 @@ const sidebarItems = [
                                 }}</span>
                             </a>
                             <ul v-if="item.children && !sidebarCollapsed && currentIndex === index"
-                                class='ml-4 opacity-75'>
-                                <li v-for="(child, i) in item.children" :key="child.title">
+                                class='pl-4 opacity-75'>
+                                <li v-for="(child) in item.children" :key="child.title" class="hover:bg-primary-500">
                                     <RouterLink
-                                        :class='` block py-1 text-xs  px-4 flex items-center rtl:space-x-reverse space-x-2 text-white  decoration-none  leading-5  group hover:text-slate-100 dark-hover:text-slate-100 focus:outline-none focus:font-bold transition duration-150 ease-in-out`'
+                                        :class='` block py-2 text-xs  px-4 flex items-center rtl:space-x-reverse space-x-2 text-white  decoration-none  leading-5  group hover:text-slate-100 dark-hover:text-slate-100 focus:outline-none focus:font-bold transition duration-150 ease-in-out`'
                                         :to="child.path">
                                         <span class="i-carbon-software-resource"></span>
                                         <span v-if="!sidebarCollapsed">{{ child.title }}</span>
@@ -108,7 +109,7 @@ const sidebarItems = [
                 </nav>
             </div>
         </div>
-        <div class='absolute bottom-0 left-0 right-0 h-12 p-2 bg-primary-700 dark:bg-primary-800'>
+        <div v-if="!sidebarCollapsed" class='absolute bottom-0 left-0 right-0 h-12 p-2 bg-primary-700 dark:bg-primary-900'>
             <div class="flex items-center justify-around w-full h-full space-x-2 text-xl text-white">
 
                 <div i="carbon-notification cursor-pointer" />

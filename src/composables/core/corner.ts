@@ -1,0 +1,38 @@
+import type { PropType, Ref } from 'vue';
+import { computed } from 'vue';
+
+
+export const corners = ['none', 'sm', 'default', 'md', 'lg', 'xl', '2xl', 'full']
+
+type ICorner = typeof corners[number]
+
+let borderRadius: Record<ICorner, string> = {
+    'none': 'rounded-none',
+    'sm': 'rounded-sm',
+    'default': 'rounded',
+    'md': 'rounded-md',
+    'lg': 'rounded-lg',
+    'xl': 'rounded-xl',
+    '2xl': 'rounded-2xl',
+    'full': 'rounded-full',
+
+}
+
+
+export const cornerProps = {
+    corner: {
+        type: String as PropType<ICorner>,
+        default: 'default'
+    }
+}
+
+export function useCorner(props: {
+    corner:Ref<ICorner>
+}) {
+
+    let cornerClass = computed(() => `${borderRadius[props.corner.value]}`)
+
+    return {
+        cornerClass: cornerClass
+    }
+}

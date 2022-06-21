@@ -4,7 +4,17 @@ module.exports = {
     "./index.html",
     "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
+  corePlugins: {
+    // ...
+      // backdropOpacity: false,
+      // backgroundOpacity: false,
+      // borderOpacity: false,
+      // divideOpacity: false,
+      // ringOpacity: false,
+      textOpacity: false
+  },
   theme: {
+    
     extend: {
       
         "colors": {

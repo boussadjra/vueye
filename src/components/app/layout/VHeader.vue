@@ -6,16 +6,18 @@ const sidebarCollapsed = ref(false)
 const { emit } = useEventsBus()
 watch(sidebarCollapsed, (val) => {
     emit('sidebarCollapsed', val)
-    //    emit('test','test emit test')
+
 })
 
 
-const { t,availableLocales,locale } = useI18n();
-
-
-console.log('--------availableLocales------------')
-console.log(availableLocales)
-console.log('--------------------')
+const { t, availableLocales, locale } = useI18n();
+//watch locale
+watch(locale, (val) => {
+ 
+    if (val === 'ar') {
+        document.body.setAttribute('dir', 'rtl')
+    }
+})
 
 
 
@@ -42,9 +44,11 @@ console.log('--------------------')
             <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
                 <div i="carbon-sun dark:carbon-moon" />
             </button>
-<!-- select input with availableLocales as options -->
-            <select class="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-primary-900 dark:text-gray-300 dark:border-gray-500 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring" v-model="locale">
-                <option v-for="locale in availableLocales" :value="locale">{{locale}}</option>  
+            <!-- select input with availableLocales as options -->
+            <select
+                class="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-primary-900 dark:text-gray-300 dark:border-gray-500 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring"
+                v-model="locale">
+                <option v-for="locale in availableLocales" :value="locale">{{ locale }}</option>
             </select>
 
 
