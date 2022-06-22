@@ -11,7 +11,7 @@ module.exports = {
       // borderOpacity: false,
       // divideOpacity: false,
       // ringOpacity: false,
-      textOpacity: false
+      // textOpacity: false
   },
   theme: {
     

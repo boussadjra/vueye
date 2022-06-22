@@ -37,6 +37,10 @@ const sidebarItems = computed(()=>[
                 title: 'Buttons',
                 path: '/components/buttons'
             },
+            {
+                title: 'Button groups',
+                path: '/components/button-groups'
+            },
          
         ]
     },

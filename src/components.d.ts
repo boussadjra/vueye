@@ -16,6 +16,7 @@ declare module '@vue/runtime-core' {
     'VAlert.story': typeof import('./components/core/data-display/VAlert/VAlert.story.vue')['default']
     VBtn: typeof import('./components/core/inputs/VBtn/VBtn.vue')['default']
     'VBtn.story': typeof import('./components/core/inputs/VBtn/VBtn.story.vue')['default']
+    VBtnGroup: typeof import('./components/core/inputs/VBtnGroup/VBtnGroup.vue')['default']
     VHeader: typeof import('./components/app/layout/VHeader.vue')['default']
     VSidebar: typeof import('./components/app/layout/VSidebar.vue')['default']
   }
