@@ -16,7 +16,7 @@ const currentIndex = ref(-1);
 function setCurrentIndex(index: number) {
     currentIndex.value = index === currentIndex.value ? -1 : index
 }
-const sidebarItems = computed(()=>[
+const sidebarItems = computed(() => [
     {
         title: t('sidebar.dashboard'),
         icon: 'i-carbon-dashboard',
@@ -27,11 +27,13 @@ const sidebarItems = computed(()=>[
         icon: 'i-carbon-assembly-cluster',
         path: '/components/buttons',
         children: [
-               {
+            {
                 title: 'Alerts',
                 path: '/components/alerts'
-
-
+            },
+            {
+                title: 'Avatars',
+                path: '/components/avatars'
             },
             {
                 title: 'Buttons',
@@ -41,7 +43,7 @@ const sidebarItems = computed(()=>[
                 title: 'Button groups',
                 path: '/components/button-groups'
             },
-         
+
         ]
     },
     {
@@ -113,7 +115,8 @@ const sidebarItems = computed(()=>[
                 </nav>
             </div>
         </div>
-        <div v-if="!sidebarCollapsed" class='absolute bottom-0 left-0 right-0 h-12 p-2 bg-primary-700 dark:bg-primary-900'>
+        <div v-if="!sidebarCollapsed"
+            class='absolute bottom-0 left-0 right-0 h-12 p-2 bg-primary-700 dark:bg-primary-900'>
             <div class="flex items-center justify-around w-full h-full space-x-2 text-xl text-white">
 
                 <div i="carbon-notification cursor-pointer" />

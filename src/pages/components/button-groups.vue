@@ -27,20 +27,20 @@ const selectedOption = ref(0);
             
             </div>
         </ComponentsDemoItem>
-        <ComponentsDemoItem title="With icons :">
+        <ComponentsDemoItem title="With s :">
             <VBtnGroup>
-                <VBtn outlined icon size="sm">
+                <VBtn outlined  size="sm">
                     <span class="i-carbon-arrow-up"></span>
                 </VBtn>
-                <VBtn outlined icon size="sm">
+                <VBtn outlined  size="sm">
                     <span class="i-carbon-arrow-down"></span>
 
                 </VBtn>
-                <VBtn outlined icon size="sm">
+                <VBtn outlined  size="sm">
                     <span class="i-carbon-arrow-left"></span>
 
                 </VBtn>
-                <VBtn outlined icon size="sm">
+                <VBtn outlined  size="sm">
                     <span class="i-carbon-arrow-right"></span>
 
                 </VBtn>
@@ -48,18 +48,18 @@ const selectedOption = ref(0);
         </ComponentsDemoItem>
         <ComponentsDemoItem title="With vertical direction :">
             <VBtnGroup vertical>
-                <VBtn outlined icon size="sm">
+                <VBtn outlined  size="sm">
                     <span class="i-carbon-arrow-up"></span>
                 </VBtn>
-                <VBtn outlined icon size="sm">
+                <VBtn outlined  size="sm">
                     <span class="i-carbon-arrow-down"></span>
 
                 </VBtn>
-                <VBtn outlined icon size="sm">
+                <VBtn outlined  size="sm">
                     <span class="i-carbon-arrow-left"></span>
 
                 </VBtn>
-                <VBtn outlined icon size="sm">
+                <VBtn outlined  size="sm">
                     <span class="i-carbon-arrow-right"></span>
 
                 </VBtn>

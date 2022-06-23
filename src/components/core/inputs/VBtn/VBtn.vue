@@ -35,6 +35,11 @@ const props = defineProps({
    ...loadingProps,
    ...cornerProps,
    ...disabledProps,
+   icon: {
+      type: String,
+      default: "",
+
+   },
    tag: {
       default: 'button',
    },
@@ -46,13 +51,13 @@ const props = defineProps({
 const { variantClasses, variantStyle } = useVariant(toPartialRefs(props, ['variant', 'bgColor', 'textColor']))
 const { sizeClasses } = useSize(toPartialRefs(props, ['size']))
 const { loadingClass } = useLoading(toPartialRefs(props, ['loading']))
-const {cornerClass} =useCorner(toPartialRefs(props,['corner']))
+const { cornerClass } = useCorner(toPartialRefs(props, ['corner']))
 
 
 const classes = computed(() => [
    'btn  space-x-2',
-   variantClasses.value, 
-   sizeClasses.value, 
+   variantClasses.value,
+   sizeClasses.value,
    cornerClass.value,
    props.block ? 'w-full' : 'w-max',
    {
@@ -60,7 +65,8 @@ const classes = computed(() => [
       'smooth': props.smooth,
       'text': props.text || props.link,
       'link': props.link,
-      'disabled':props.disabled
+      'disabled': props.disabled,
+      'icon': props.icon,
    },
 ])
 
@@ -71,13 +77,15 @@ const currentTag = computed(() => props.link ? 'a' : props.tag)
 </script>
 
 <template>
-   <component :is="currentTag" :class="classes" :style="variantStyle" >
+   <component :is="currentTag" :class="classes" :style="variantStyle">
       <slot name="prepend">
          <span v-if="prepend" :class="`prepend ${prepend}`" />
       </slot>
 
       <span i-carbon-circle-dash v-if="loading" :class="loadingClass" />
-      <slot v-else />
+      <slot v-else>
+         <span v-if="icon" :class="` ${icon}`" />
+      </slot>
 
       <slot name="append">
          <component v-if="append" :class="`append ${append}`" />
@@ -88,13 +96,14 @@ const currentTag = computed(() => props.link ? 'a' : props.tag)
 
 <style scoped>
 .btn {
-   @apply h-max flex justify-center shadow-md hover:shadow items-center  transition-colors duration-300 cursor-pointer capitalize
-}
-.btn.disabled{
-@apply bg-gray-400 cursor-not-allowed shadow-none 
+   @apply h-max flex justify-center shadow-md hover:shadow items-center transition-colors duration-300 cursor-pointer capitalize
 }
 
-.btn:not(.text) {
+.btn.disabled {
+   @apply bg-gray-400 cursor-not-allowed shadow-none
+}
+
+.btn:not(.text),.btn:not(.outlined) {
    @apply text-white
 }
 
@@ -114,10 +123,31 @@ const currentTag = computed(() => props.link ? 'a' : props.tag)
    @apply px-10 py-3 text-xl
 }
 
- .btn .prepend{
-@apply mr-2 rtl:ml-2 rtl:mr-0
+.btn .prepend {
+   @apply mr-2 rtl:ml-2 rtl:mr-0
 }
- .btn .append{
-@apply ml-2 rtl:mr-2 rtl:ml-0
+
+.btn .append {
+   @apply ml-2 rtl:mr-2 rtl:ml-0
+}
+
+.btn.icon {
+   @apply rounded-full
+}
+
+.btn.icon.xs {
+   @apply p-2 text-sm
+}
+
+.btn.icon.sm {
+   @apply p-3 text-base
+}
+
+.btn.icon.md {
+   @apply p-4 text-xl
+}
+
+.btn.icon.lg {
+   @apply p-5 text-2xl
 }
 </style>

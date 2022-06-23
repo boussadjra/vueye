@@ -1,6 +1,6 @@
 import { PropType, Ref } from "vue";
 
-export const sizes = ['xs', 'sm', 'md', 'lg', 'xl', '2xl'];
+export const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'];
 
 export type Size = typeof sizes[number];
 

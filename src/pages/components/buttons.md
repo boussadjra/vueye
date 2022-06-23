@@ -120,6 +120,17 @@ meta:
    
 </div>
 
+### Icons only :
+
+<div class="flex flex-wrap items-center space-x-2 space-y-2 rtl:space-x-reverse">
+    <VBtn size="xs" class="first:ml-2 first:mt-2" variant="primary" icon="i-carbon-arrow-right"></VBtn>
+    <VBtn size="sm" variant="primary" icon="i-carbon-arrow-right"></VBtn>
+    <VBtn size="md" variant="primary" icon="i-carbon-arrow-right"></VBtn>
+    <VBtn size="lg" variant="primary" icon="i-carbon-arrow-right"></VBtn>
+ 
+   
+</div>
+
 ### Append and Prepend :
 
 <div class="flex flex-wrap space-x-2 space-y-2 rtl:space-x-reverse">

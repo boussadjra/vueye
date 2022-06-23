@@ -72,7 +72,7 @@ margin-bottom:40px;
   @apply border-2 bg-transparent hover:bg-transparent
 }
 .primary.outlined {
-  @apply border-primary-500   text-primary-500 hover:!border-primary-600 hover:!text-primary-600 dark:text-primary-400
+  @apply border-primary-500   !text-primary-500 hover:!border-primary-600 hover:!text-primary-600 dark:text-primary-400
 }
 .secondary.outlined {
   @apply border-secondary-500 !text-secondary-500 hover:!border-secondary-600 hover:!text-secondary-600
