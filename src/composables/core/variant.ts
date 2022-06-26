@@ -17,7 +17,8 @@ export const variantProps = {
     variant: {
         type: String as PropType<Variant | ExtendedVariant>,
         default: 'default',
-        validator: (value: Variant & ExtendedVariant) => allowedVariants.includes(value)
+        validator: (value: Variant & ExtendedVariant) => allowedVariants.includes(value),
+        description: "Set the variant of the component <i>(default, success, info, warning, error, primary, secondary, dark, light)</i>",
     },
     bgColor: {
         type: String,
@@ -31,7 +32,8 @@ export const variantProps = {
             }
             return true
 
-        }
+        },
+        description: "Set the background color of the component",
     },
     textColor: {
         type: String,
@@ -45,7 +47,8 @@ export const variantProps = {
             }
             return true
 
-        }
+        },
+        description: "Set the text color of the component",
     }
 
 }

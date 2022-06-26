@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import alertProps from '~/components/core/data-display/VAlert/alertProps';
+
 
 useHead({
     title: 'Alerts'
@@ -12,6 +14,8 @@ function resetAlerts() {
   closedAlert1.value = false;
   closedAlert2.value = false;
 }
+
+
 
 </script> 
 
@@ -120,7 +124,17 @@ function resetAlerts() {
 
       </div>
     </ComponentsDemoItem>
+    <ComponentsDemoItem title="Alert with title">
+      <div class="flex flex-wrap gap-2 not-prose">
+
+        <VAlert  variant="success" title="Done successfully"> </VAlert>
+
+
+      </div>
+    </ComponentsDemoItem>
   </ComponentsDemo>
+    <PropsDoc :component-props="alertProps" />
+
 </template>
 <route lang="yaml">
 meta:

@@ -7,7 +7,8 @@ import { computed, Ref } from 'vue';
 export const loadingProps = {
     loading: {
         type: Boolean,
-        default: false
+        default: false,
+        description: "Add a loading indicator to the component",
     }
 }
 
@@ -16,7 +17,7 @@ export function useLoading(props: {
 }) {
 
 
-    let loadingClass = computed(() => ({ 'animate-spin' : props.loading  }) )
+    let loadingClass = computed(() => ({ 'animate-spin': props.loading }))
 
     return {
         loadingClass: loadingClass.value

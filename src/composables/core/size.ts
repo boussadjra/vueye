@@ -8,7 +8,8 @@ export const sizeProps = {
     size: {
         type: String as PropType<Size>,
         default: 'md',
-        validator: (value: Size) => sizes.includes(value)
+        validator: (value: Size) => sizes.includes(value),
+        description: "Set the size of the component (xs, sm, md, lg, xl, xxl)",
     }
 }
 

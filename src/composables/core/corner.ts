@@ -22,12 +22,13 @@ let borderRadius: Record<ICorner, string> = {
 export const cornerProps = {
     corner: {
         type: String as PropType<ICorner>,
-        default: 'default'
+        default: 'default',
+        description: "Set the border radius of the component",
     }
 }
 
 export function useCorner(props: {
-    corner:Ref<ICorner>
+    corner: Ref<ICorner>
 }) {
 
     let cornerClass = computed(() => `${borderRadius[props.corner.value]}`)

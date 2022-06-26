@@ -1,41 +1,11 @@
 <script setup lang="ts">
-import useVariant, { variantProps } from '~/composables/core/variant';
-import outlinedProps from '~/composables/core/props/outlinedProps';
-import smoothProps from '~/composables/core/props/smoothProps';
-import { dismissProps, useDismiss } from '~/composables/core/dismiss';
-
+import useVariant from '~/composables/core/variant';
+import { useDismiss } from '~/composables/core/dismiss';
 import { toPartialRefs } from '~/utils/helpers';
-import blockProps from '~/composables/core/props/blockProps';
-const props = defineProps({
-    ...variantProps,
-    ...outlinedProps,
-    ...smoothProps,
-    ...dismissProps,
-    ...blockProps,
-    border: {
-        type: [Boolean, String],
-        validator: (val: boolean | string) => {
-            return typeof val === 'boolean' || [
-                'top',
-                'right',
-                'bottom',
-                'left',
-            ].includes(val)
-        },
-    },
-    block: {
-        default: true,
-    },
-    title: {
-        type: String,
-        default: ''
-    },
-    content: {
-        type: String,
-        default: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.'
-    },
+import alertProps from './alertProps';
 
-})
+
+const props = defineProps(alertProps)
 
 const { variantClasses } = useVariant(toPartialRefs(props, ['variant']))
 
@@ -77,7 +47,7 @@ const slots = useSlots()
 
 <template>
     <transition name="fade">
-        <div v-if="!closed" :close-text="dismissible ? 'Close' : ''" :class="classes">
+        <div v-if="!closed" :close-text="dismissible ? 'Close' : ''" :class="classes" role="alert">
             <div class="flex items-center ">
                 <div class="text-xl alert__icon alert__prepend " v-if="variantIcon[variant] || slots.prepend">
                     <slot name="prepend"> <span :class="variantIcon[variant]" /></slot>
@@ -87,7 +57,7 @@ const slots = useSlots()
                     <template v-if="slots.title">
                         <slot name="title"></slot>
                     </template>
-                    <div v-else class="font-bold">{{ title }}</div>
+                    <div v-else class="text-lg font-bold">{{ title }}</div>
                     <slot v-if="slots.default"></slot>
                     <div v-else>{{ content }}</div>
                 </div>

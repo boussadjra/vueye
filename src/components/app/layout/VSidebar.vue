@@ -16,6 +16,18 @@ const currentIndex = ref(-1);
 function setCurrentIndex(index: number) {
     currentIndex.value = index === currentIndex.value ? -1 : index
 }
+
+const route = useRoute()
+onMounted(() => {
+
+    let path = route.path
+    console.log('---------index-----------')
+    console.log(path, sidebarItems.value.findIndex(item => item.path.startsWith(path)))
+    console.log('--------------------')
+    setCurrentIndex(sidebarItems.value.findIndex(item => path.startsWith(item.path)))
+
+})
+
 const sidebarItems = computed(() => [
     {
         title: t('sidebar.dashboard'),
@@ -25,7 +37,7 @@ const sidebarItems = computed(() => [
     {
         title: t('sidebar.components'),
         icon: 'i-carbon-assembly-cluster',
-        path: '/components/buttons',
+        path: '/components',
         children: [
             {
                 title: 'Alerts',
@@ -95,9 +107,9 @@ const sidebarItems = computed(() => [
                                         item.title
                                 }}</span>
                             </a>
-                            <ul v-if="item.children && !sidebarCollapsed && currentIndex === index"
-                                class='pl-4 opacity-75'>
-                                <li v-for="(child) in item.children" :key="child.title" class="hover:bg-primary-500">
+                            <ul v-if="item.children && !sidebarCollapsed && currentIndex === index" class='opacity-75 '>
+                                <li v-for="(child) in item.children" :key="child.title"
+                                    class="pl-4 hover:bg-primary-500">
                                     <RouterLink
                                         :class='` block py-2 text-xs  px-4 flex items-center rtl:space-x-reverse space-x-2 text-white  decoration-none  leading-5  group hover:text-slate-100 dark-hover:text-slate-100 focus:outline-none focus:font-bold transition duration-150 ease-in-out`'
                                         :to="child.path">

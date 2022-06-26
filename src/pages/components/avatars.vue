@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import avatarProps from '~/components/core/data-display/VAvatar/avatarProps';
+
 
 useHead({
   title: 'Avatars'
@@ -62,6 +64,7 @@ useHead({
     </ComponentsDemoItem>
 
   </ComponentsDemo>
+ <PropsDoc :component-props="avatarProps" />
 </template>
 <route lang="yaml">
 meta:

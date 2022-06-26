@@ -96,25 +96,25 @@ margin-bottom:40px;
 /**** smooth ****/
 
 .primary.smooth {
-  @apply bg-primary-200 hover:bg-primary-300 !text-primary-500 hover:!text-primary-600
+  @apply bg-primary-200 dark:bg-primary-700 hover:bg-primary-300 !text-primary-500 dark:!text-primary-200 hover:!text-primary-600
 }
 .secondary.smooth {
-  @apply bg-secondary-200 hover:bg-secondary-300 !text-secondary-500 hover:!text-secondary-600
+  @apply bg-secondary-200 dark:bg-secondary-900 hover:bg-secondary-300 !text-secondary-500 hover:!text-secondary-600
 }
 .info.smooth {
-  @apply bg-blue-200 hover:bg-blue-300 !text-blue-500 hover:!text-blue-600
+  @apply bg-blue-200 dark:bg-blue-900 hover:bg-blue-300 !text-blue-500 hover:!text-blue-600
 }
 .warning.smooth {
-  @apply bg-amber-200 hover:bg-amber-300 !text-amber-500 hover:!text-amber-600
+  @apply bg-amber-200 dark:bg-amber-900 hover:bg-amber-300 !text-amber-500 hover:!text-amber-600
 }
 .error.smooth {
-  @apply bg-red-200 hover:bg-red-300 !text-red-500 hover:!text-red-600
+  @apply bg-red-200 dark:bg-red-900 hover:bg-red-300 !text-red-500 hover:!text-red-600
 }
 .success.smooth {
-  @apply bg-green-200 hover:bg-green-300 !text-green-500 hover:!text-green-600
+  @apply bg-green-200 bg-green-900 hover:bg-green-300 !text-green-500 hover:!text-green-600
 }
 .default.smooth {
-  @apply bg-gray-200 hover:bg-gray-300 !text-gray-500 hover:!text-gray-600
+  @apply bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 !text-gray-500 dark:!text-gray-300 hover:!text-gray-600
 }
 
 /***** text *****/
@@ -123,25 +123,25 @@ margin-bottom:40px;
   @apply bg-transparent hover:border hover:bg-transparent !shadow-none
 }
 .text.primary {
-  @apply text-primary-500 hover:text-primary-600 hover:border-primary-100
+  @apply !text-primary-500 hover:text-primary-600 hover:border-primary-100
 }
 .text.secondary {
-  @apply text-secondary-500 hover:text-secondary-600 hover:border-secondary-200
+  @apply !text-secondary-500 hover:text-secondary-600 hover:border-secondary-200
 }
 .text.info {
-  @apply text-blue-500 hover:text-blue-600 hover:border-blue-200
+  @apply !text-blue-500 hover:text-blue-600 hover:border-blue-200
 }
 .text.warning {
-  @apply text-amber-500 hover:text-amber-600 hover:border-amber-200
+  @apply !text-amber-500 hover:text-amber-600 hover:border-amber-200
 }
 .text.error {
-  @apply text-red-500 hover:text-red-600 hover:border-red-200
+  @apply !text-red-500 hover:text-red-600 hover:border-red-200
 }
 .text.success {
-  @apply text-green-500 hover:text-green-600 hover:border-green-200
+  @apply !text-green-500 hover:text-green-600 hover:border-green-200
 }
 .text.default {
-  @apply text-gray-500 hover:text-gray-600 hover:border-gray-200
+  @apply !text-gray-500 hover:text-gray-600 hover:border-gray-200
 }
 
 

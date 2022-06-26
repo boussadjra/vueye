@@ -3,30 +3,16 @@
 
 <script setup lang="ts">
 
-import { useCorner, cornerProps } from '~/composables/core/corner';
-import { sizeProps, useSize } from '~/composables/core/size';
+import { useCorner } from '~/composables/core/corner';
+import { useSize } from '~/composables/core/size';
 import { toPartialRefs } from '~/utils/helpers';
 
 import type { Size } from '~/composables/core/size';
 import { useSlots, ref } from 'vue';
+import avatarProps from './avatarProps';
 
 
-const props = defineProps({
-    ...cornerProps,
-    ...sizeProps,
-    icon: {
-        type: Boolean,
-        default: true
-    },
-    src: {
-        type: String,
-        default: ''
-    },
-    alt: {
-        type: String,
-        default: ''
-    }
-})
+const props = defineProps(avatarProps)
 
 const { cornerClass } = useCorner(toPartialRefs(props, ['corner']))
 const { sizeClasses } = useSize(toPartialRefs(props, ['size']))
@@ -60,25 +46,31 @@ function onImgLoadError(e: Event) {
     </div>
 </template>
 <style scoped>
-    .avatar {
-        @apply bg-gray-300 dark:bg-gray-600 flex items-center justify-center;
-    }
-    .avatar.xs {
-        @apply h-10 w-10;
-    }
-    .avatar.sm {
-        @apply h-16 w-16;
-    }
-    .avatar.md {
-        @apply h-20 w-20;
-    }
-    .avatar.lg {
-        @apply h-24 w-24;
-    }
-    .avatar.xl {
-        @apply h-32 w-32;
-    }
-    .avatar.xxl {
-        @apply h-40 w-40;
-    }
+.avatar {
+    @apply bg-gray-300 dark:bg-gray-600 flex items-center justify-center;
+}
+
+.avatar.xs {
+    @apply h-10 w-10;
+}
+
+.avatar.sm {
+    @apply h-16 w-16;
+}
+
+.avatar.md {
+    @apply h-20 w-20;
+}
+
+.avatar.lg {
+    @apply h-24 w-24;
+}
+
+.avatar.xl {
+    @apply h-32 w-32;
+}
+
+.avatar.xxl {
+    @apply h-40 w-40;
+}
 </style>

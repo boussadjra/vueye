@@ -6,46 +6,15 @@
  * @displayName VBtn
  */
 
-import { cornerProps, useCorner } from '~/composables/core/corner';
-import { loadingProps, useLoading } from '~/composables/core/loading';
-import appendProps from '~/composables/core/props/appendProps';
-import blockProps from '~/composables/core/props/blockProps';
-import disabledProps from '~/composables/core/props/disabledProps';
-import linkProps from '~/composables/core/props/linkProps';
-
-import outlinedProps from '~/composables/core/props/outlinedProps';
-import smoothProps from '~/composables/core/props/smoothProps';
-import tagProps from '~/composables/core/props/tagProps';
-import textProps from '~/composables/core/props/textProps';
-import { sizeProps, useSize } from '~/composables/core/size';
-import useVariant, { variantProps } from '~/composables/core/variant';
+import { useCorner } from '~/composables/core/corner';
+import { useLoading } from '~/composables/core/loading';
+import { useSize } from '~/composables/core/size';
+import useVariant from '~/composables/core/variant';
 import { toPartialRefs } from '~/utils/helpers';
+import btnProps from './btnProps';
 
 
-const props = defineProps({
-   ...tagProps,
-   ...variantProps,
-   ...sizeProps,
-   ...blockProps,
-   ...outlinedProps,
-   ...smoothProps,
-   ...textProps,
-   ...linkProps,
-   ...appendProps,
-   ...loadingProps,
-   ...cornerProps,
-   ...disabledProps,
-   icon: {
-      type: String,
-      default: "",
-
-   },
-   tag: {
-      default: 'button',
-   },
-
-
-})
+const props = defineProps(btnProps)
 
 
 const { variantClasses, variantStyle } = useVariant(toPartialRefs(props, ['variant', 'bgColor', 'textColor']))
@@ -103,7 +72,8 @@ const currentTag = computed(() => props.link ? 'a' : props.tag)
    @apply bg-gray-400 cursor-not-allowed shadow-none
 }
 
-.btn:not(.text),.btn:not(.outlined) {
+.btn:not(.text),
+.btn:not(.outlined) {
    @apply text-white
 }
 

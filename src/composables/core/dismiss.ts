@@ -1,18 +1,21 @@
 export const dismissProps = {
     dismissible: {
         type: Boolean,
-        default: false
+        default: false,
+        description: "Make the component dismissible (closeable)",
+
     },
     closed: {
         type: Boolean,
-        default: false
+        default: false,
+        description: "Make the component closed",
     }
 }
 
 export function useDismiss(emit: Function) {
 
     function close() {
-        console.log('emit close')
+   
         emit('update:closed', true)
     }
 
