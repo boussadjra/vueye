@@ -1,3 +1,4 @@
+const colors =require('tailwindcss/colors')
 module.exports = {
   darkMode: "class",
   content: [
@@ -18,18 +19,19 @@ module.exports = {
     extend: {
       
         "colors": {
-          'primary': {
-            50: '#ABC2FF',
-            100: '#96B3FF',
-            200: '#6D95FF',
-            300: '#4577FF',
-            400: '#1a5Add',
-            500: '#0042c2',
-            600: '#0033BA',
-            700: '#002382',
-            800: '#001137',
-            900: '#000525',
+       'primary': {
+            '50': '#B3C0FC',
+  '100': '#9FB0FC',
+  '200': '#7890FA',
+  '300': '#516FF9',
+  '400': '#294FF8',
+  '500': '#0832EF',
+  '600': '#072AC8',
+  '700': '#051F92',
+  '800': '#03135C',
+  '900': '#010825'
           },
+
           secondary: {
             '50': '#FCE9FD',
             '100': '#F9D7EF',

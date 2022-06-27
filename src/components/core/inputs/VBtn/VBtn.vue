@@ -65,7 +65,7 @@ const currentTag = computed(() => props.link ? 'a' : props.tag)
 
 <style scoped>
 .btn {
-   @apply h-max flex justify-center shadow-md hover:shadow items-center transition-colors duration-300 cursor-pointer capitalize
+   @apply h-max flex whitespace-nowrap justify-center shadow-md hover:shadow items-center transition-colors duration-300 cursor-pointer capitalize border-2
 }
 
 .btn.disabled {

@@ -4,6 +4,27 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "PalanquinDark-Regular";
+  src: url("../assets/fonts/PalanquinDark-Regular.ttf") format("truetype");
+} 
+@font-face {
+  font-family: "PalanquinDark-Medium";
+  src: url("../assets/fonts/PalanquinDark-Medium") format("truetype");
+} 
+@font-face {
+  font-family: "PalanquinDark-SemiBold";
+  src: url("../assets/fonts/PalanquinDark-SemiBold.ttf") format("truetype");
+} 
+@font-face {
+  font-family: "PalanquinDark-Bold";
+  src: url("~/assets/fonts/PalanquinDark-Bold.ttf") format("truetype");
+} 
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/fonts/Rubik-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 1 999;
+} 
 
 html,
 body,
@@ -11,10 +32,15 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 html.dark {
   background: #121212;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-family: 'Rubik';
 }
 
 #nprogress {
@@ -42,30 +68,28 @@ margin-bottom:40px;
 *******************/
 
 .primary {
-  @apply bg-primary-500  hover:bg-primary-600 
+  @apply bg-primary-500  hover:bg-primary-600  border-primary-500 
 }
 .default{
- @apply  bg-slate-500 hover:bg-slate-600 
+ @apply  bg-slate-500 hover:bg-slate-600  border-slate-500 
 }
 .secondary {
-  @apply bg-secondary-500 hover:bg-secondary-600
+  @apply bg-secondary-500 hover:bg-secondary-600 border-secondary-500
 }
 
 .info {
-  @apply bg-blue-500 hover:bg-blue-600
+  @apply bg-blue-500 hover:bg-blue-600 border-blue-500
 }
 .warning {
-  @apply bg-amber-500 hover:bg-amber-600
+  @apply bg-amber-500 hover:bg-amber-600 border-amber-500
 }
 .error {
-  @apply bg-red-500 hover:bg-red-600
+  @apply bg-red-500 hover:bg-red-600 border-red-500
 }
 .success {
-  @apply bg-green-500 hover:bg-green-600
+  @apply bg-green-500 hover:bg-green-600 border-green-500
 }
-.default {
-  @apply bg-gray-500 hover:bg-gray-600
-}  
+
 
 /**** outlined ****/
 .outlined {
@@ -94,36 +118,39 @@ margin-bottom:40px;
 }
 
 /**** smooth ****/
+.smooth, .outlined{
+ @apply !shadow-none 
+}
 
 .primary.smooth {
-  @apply bg-primary-200 dark:bg-primary-700 hover:bg-primary-300 !text-primary-500 dark:!text-primary-200 hover:!text-primary-600
+  @apply bg-primary-200 border-primary-200 dark:bg-primary-700 dark:border-primary-700 hover:bg-primary-300 !text-primary-500 dark:!text-primary-200 hover:!text-primary-600
 }
 .secondary.smooth {
-  @apply bg-secondary-200 dark:bg-secondary-900 hover:bg-secondary-300 !text-secondary-500 hover:!text-secondary-600
+  @apply bg-secondary-200 border-secondary-200 dark:bg-secondary-900 dark:border-secondary-900 hover:bg-secondary-300 !text-secondary-500 hover:!text-secondary-600
 }
 .info.smooth {
-  @apply bg-blue-200 dark:bg-blue-900 hover:bg-blue-300 !text-blue-500 hover:!text-blue-600
+  @apply bg-blue-200 dark:bg-blue-900 border-blue-200 dark:border-blue-900 hover:bg-blue-300 !text-blue-500 hover:!text-blue-600
 }
 .warning.smooth {
-  @apply bg-amber-200 dark:bg-amber-900 hover:bg-amber-300 !text-amber-500 hover:!text-amber-600
+  @apply bg-amber-200 dark:bg-amber-900 border-amber-200 dark:border-amber-900 hover:bg-amber-300 !text-amber-600 dark:!text-amber-400 hover:!text-amber-600
 }
 .error.smooth {
-  @apply bg-red-200 dark:bg-red-900 hover:bg-red-300 !text-red-500 hover:!text-red-600
+  @apply bg-red-200 dark:bg-red-900 border-red-200 dark:border-red-900 hover:bg-red-300 !text-red-500 hover:!text-red-600
 }
 .success.smooth {
-  @apply bg-green-200 bg-green-900 hover:bg-green-300 !text-green-500 hover:!text-green-600
+  @apply bg-green-200 dark:bg-green-900 border-green-200 dark:border-green-900 hover:bg-green-300 !text-green-500 hover:!text-green-600
 }
 .default.smooth {
-  @apply bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 !text-gray-500 dark:!text-gray-300 hover:!text-gray-600
+  @apply bg-gray-300 dark:bg-gray-800 border-gray-300 dark:border-gray-800 hover:bg-gray-300 !text-gray-500 dark:!text-gray-300 hover:!text-gray-600
 }
 
 /***** text *****/
 
 .text{
-  @apply bg-transparent hover:border hover:bg-transparent !shadow-none
+  @apply bg-transparent border border-transparent hover:border hover:bg-transparent !shadow-none
 }
 .text.primary {
-  @apply !text-primary-500 hover:text-primary-600 hover:border-primary-100
+  @apply !text-primary-500 hover:text-primary-600 hover:border-primary-100 
 }
 .text.secondary {
   @apply !text-secondary-500 hover:text-secondary-600 hover:border-secondary-200
@@ -148,7 +175,7 @@ margin-bottom:40px;
 /***** link *****/
 
 .link{
-  @apply bg-transparent !no-underline hover:!underline hover:underline-offset-2 hover:!bg-transparent hover:border-0 
+  @apply bg-transparent border-0 underline hover:!underline hover:underline-offset-2 hover:!bg-transparent hover:border-0 
 }
 
 

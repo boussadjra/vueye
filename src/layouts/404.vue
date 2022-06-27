@@ -4,15 +4,19 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <main p="x4 y10" text="center teal-700 dark:gray-200">
-    <div text-4xl>
+  <main p="x4 y10" class="flex flex-col items-center justify-center h-full ">
+    <div class="text-6xl text-amber-600">
       <div i-carbon-warning inline-block />
     </div>
     <RouterView />
-    <div>
-      <button btn text-sm m="3 t8" @click="router.back()">
+    <div class="flex justify-center mt-4 text-center">
+      <VBtn variant="primary" @click="router.back()">
         {{ t('button.back') }}
-      </button>
+      </VBtn>
     </div>
   </main>
 </template>
+<route lang="yaml">
+meta:
+  layout: home
+</route>

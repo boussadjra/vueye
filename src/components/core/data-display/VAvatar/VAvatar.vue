@@ -38,7 +38,7 @@ function onImgLoadError(e: Event) {
 
 </script>
 <template>
-    <div :class="[cornerClass, sizeClasses, textSizes[size]]" class="font-bold centered avatar">
+    <div :class="[cornerClass, sizeClasses, textSizes[size]]" class="font-bold bg-gray-300 centered avatar dark:bg-gray-600">
         <slot v-if="slots.default"></slot>
         <img v-else-if="src && !imgLoadError" @error="onImgLoadError" :class="[cornerClass]" :src="src" :alt="alt"
             class="object-cover w-full h-full" />
@@ -47,7 +47,7 @@ function onImgLoadError(e: Event) {
 </template>
 <style scoped>
 .avatar {
-    @apply bg-gray-300 dark:bg-gray-600 flex items-center justify-center;
+    @apply  flex items-center justify-center;
 }
 
 .avatar.xs {
