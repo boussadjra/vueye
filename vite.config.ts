@@ -1,5 +1,3 @@
-/// <reference types="histoire" />
-
 import path from 'path'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
@@ -160,9 +158,6 @@ export default defineConfig({
     script: 'async',
     formatting: 'minify',
     onFinished() { generateSitemap() },
-  },
-  histoire: {
-
   },
   // https://github.com/vitest-dev/vitest
   test: {
