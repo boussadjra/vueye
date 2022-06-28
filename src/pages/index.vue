@@ -24,6 +24,7 @@ useHead({
       hid: "og:title",
       name: "og:title",
       content: "The Vueye home page",
+      image:'https://github.com/boussadjra/vueye/blob/main/src/assets/img/screenshots/home.png'
       
     },
     {
@@ -136,7 +137,12 @@ let features = [
     <div class="flex flex-wrap justify-center w-full h-full">
       <div class="flex flex-col justify-center w-full h-full px-8 pt-6 pb-8 mb-4 rounded md:w-1/2  max-w-[400px]">
         <div class="flex flex-col mb-4 md:text-left">
-          <h1 class="text-6xl font-bold uppercase text-primary-500 dark:text-primary-400"> Vueye</h1>
+          <h1 class="text-6xl font-bold uppercase text-primary-500 dark:text-primary-400"> Vueye
+           <span class="text-xl block font-bold text-primary-500 dark:text-primary-400">
+            A Vue.js 3 template
+          </span>
+          </h1>
+         
           <p class="max-w-md py-4 text-base text-slate-600 dark:text-slate-100">
             A rich template with many components, which are built with Tailwind CSS And Vue.
           </p>
@@ -184,7 +190,7 @@ let features = [
 
     <div class="px-4 py-32">
       <div class="text-left ">
-        <h1 class="text-2xl font-bold text-gray-600 dark:text-gray-400">Features</h1>
+        <h2 class="text-2xl font-bold text-gray-600 dark:text-gray-400">Features</h2>
         <div class="grid gap-16 mt-10 md:grid-cols-2 ">
           <div class="relative" v-for="(feature) in features" :key="feature.title">
             <dt>
