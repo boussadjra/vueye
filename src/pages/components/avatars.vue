@@ -1,7 +1,14 @@
 <script setup lang="ts">
 import avatarProps from '~/components/core/data-display/VAvatar/avatarProps';
 
+import flower1 from '~/assets/img/flowers/f (1).jpg';
+import flower2 from '~/assets/img/flowers/f (2).jpg';
+import flower3 from '~/assets/img/flowers/f (4).jpg';
+import flower4 from '~/assets/img/flowers/f (3).jpg';
+import landscape from '~/assets/img/landscape.jpg';
+import jsLogo from '~/assets/img/js.png';
 
+const imgs=[flower1,flower2,flower3,flower4];
 useHead({
   title: 'Avatars'
 
@@ -39,22 +46,22 @@ useHead({
 
     <ComponentsDemoItem title="Image :">
       <div class="flex flex-wrap items-center gap-2">
-        <VAvatar corner="full" class="first:ml-2 first:mt-2" src="/src/assets/img/flowers/f (3).jpg"></VAvatar>
+        <VAvatar corner="full" class="first:ml-2 first:mt-2" :src="flower3"></VAvatar>
       </div>
     </ComponentsDemoItem>
 
     <ComponentsDemoItem title="Image :">
       <div class="flex flex-wrap items-center gap-2">
-        <VAvatar corner="full" class="first:ml-2 first:mt-2" src="/src/assets/img/js.png"></VAvatar>
+        <VAvatar corner="full" class="first:ml-2 first:mt-2" :src="jsLogo"></VAvatar>
         <VAvatar corner="full" src="/src/asset/img/logo.svg" alt="vue"></VAvatar>
-        <VAvatar corner="full" src="/src/assets/img/landscape.jpg" alt="vue"></VAvatar>
+        <VAvatar corner="full" :src="landscape" alt="vue"></VAvatar>
       </div>
     </ComponentsDemoItem>
 
     <ComponentsDemoItem title="Stacked :">
       <div class="flex flex-wrap items-center gap-2">
         <VAvatarGroup>
-          <VAvatar v-for="l in 4" corner="full" variant="primary" :src="'/src/assets/img/flowers/f (' + l + ').jpg'">
+          <VAvatar v-for="img in imgs" corner="full" variant="primary" :src="img">
           </VAvatar>
           <VAvatar corner="full">
             <span class="text-sm">+2</span>

@@ -1,7 +1,84 @@
 <script setup lang="ts">
-
+import flower3 from '~/assets/img/flowers/f (3).jpg';
+import landscape from '~/assets/img/landscape.jpg';
+import homeImg from '~/assets/img/screenshots/home.png';
 import { toggleDark } from '~/composables';
 const { t } = useI18n();
+
+useHead({
+  title: 'Home',
+  meta: [
+    {
+      name: 'description',
+      content: 'The Vueye homepage',
+    },
+    {
+      name: "keywords",
+      content: "contact,makane,makane.fr,makane.com,makane.net,makane.org,makane.info,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk",
+    },
+    {
+      name: "robots",
+      content: "index,follow",
+    },
+    {
+      hid: "og:title",
+      name: "og:title",
+      content: "The Vueye homepage",
+    },
+    {
+      hid: "og:description",
+      name: "og:description",
+      content: "Vue template",
+    },
+    {
+      hid: "og:image",
+      name: "og:image",
+      content: homeImg,
+    },
+    {
+      hid: "og:url",
+      name: "og:url",
+      content: "https://vueye.netlify.app/",
+    },
+    {
+      hid: "og:type",
+      name: "og:type",
+      content: "website",
+    },
+    {
+      hid: "og:site_name",
+      name: "og:site_name",
+      content: "Vueye",
+    },
+    {
+      hid: "twitter:card",
+      name: "twitter:card",
+      content: "summary_large_image",
+    },
+    {
+      hid: "twitter:title",
+      name: "twitter:title",
+      content: "Vueye",
+    },
+    {
+      hid: "twitter:description",
+      name: "twitter:description",
+      content: "Vueye",
+    },
+    {
+      hid: "twitter:image",
+      name: "twitter:image",
+      //@ts-ignore
+      content: homeImg,
+    },
+    {
+      hid: "twitter:site",
+      name: "twitter:site",
+      content: "@vueye",
+    },
+  ],
+
+})
 
 let features = [
   {
@@ -66,7 +143,8 @@ let features = [
 
         <!-- CTA -->
         <div class="flex flex-wrap items-center justify-center gap-2 mb-4 rtl:space-x-reverse">
-          <VBtn variant="primary" append="i-carbon-arrow-right" class="uppercase" @click="$router.push('/components/alerts')">Get Started</VBtn>
+          <VBtn variant="primary" append="i-carbon-arrow-right" class="uppercase"
+            @click="$router.push('/components/alerts')">Get Started</VBtn>
 
           <VBtn prepend="i-carbon-logo-github" smooth tag="a" target="_blank"
             href="https://github.com/boussadjra/vueye">
@@ -93,8 +171,8 @@ let features = [
             </VAlert>
           </div>
           <div class="flex gap-2">
-            <VAvatar corner="full" c src="/src/assets/img/flowers/f (3).jpg"></VAvatar>
-            <VAvatar corner="xl" src="/src/assets/img/landscape.jpg" alt="vue"></VAvatar>
+            <VAvatar corner="full" :src="flower3"></VAvatar>
+            <VAvatar corner="xl" :src="landscape" alt="vue"></VAvatar>
             <VAvatar class="text-white bg-green-600 dark:bg-green-700" corner="full">A </VAvatar>
 
 

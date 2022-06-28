@@ -117,20 +117,15 @@ const sidebarItems = computed(() => [
                                         <span v-if="!sidebarCollapsed">{{ child.title }}</span>
                                     </RouterLink>
                                 </li>
-
                             </ul>
-
                         </li>
-
                     </ul>
-
                 </nav>
             </div>
         </div>
         <div v-if="!sidebarCollapsed"
-            class='absolute bottom-0 left-0 right-0 h-12 p-2 bg-primary-700 dark:bg-primary-900'>
+            class='md:absolute bottom-0 left-0 right-0 h-12 p-2 bg-primary-700 dark:bg-primary-900'>
             <div class="flex items-center justify-around w-full h-full space-x-2 text-xl text-white">
-
                 <div i="carbon-notification cursor-pointer" />
                 <div i="carbon-chat cursor-pointer" />
                 <div i="carbon-settings cursor-pointer" />

@@ -8,7 +8,7 @@ defineProps({
 })
 </script>
 <template>
-    <div class="pr-8 prose rtl:pr-0 rtl:pl-8">
+    <div class="pr-8 prose rtl:pr-0 rtl:pl-8 pl-8">
         <h2> {{ title }} </h2>
         <section>
             <slot></slot>
