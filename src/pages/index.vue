@@ -10,7 +10,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: 'The Vueye homepage',
+      content: 'The Vueye home page',
     },
     {
       name: "keywords",
@@ -23,7 +23,8 @@ useHead({
     {
       hid: "og:title",
       name: "og:title",
-      content: "The Vueye homepage",
+      content: "The Vueye home page",
+      
     },
     {
       hid: "og:description",
