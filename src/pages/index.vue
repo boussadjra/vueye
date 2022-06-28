@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import flower3 from '~/assets/img/flowers/f (3).jpg';
 import landscape from '~/assets/img/landscape.jpg';
-import homeImg from '~/assets/img/screenshots/home.png';
+// import homeImg from '~/assets/img/screenshots/home.png';
 import { toggleDark } from '~/composables';
 const { t } = useI18n();
 
@@ -14,7 +14,7 @@ useHead({
     },
     {
       name: "keywords",
-      content: "contact,makane,makane.fr,makane.com,makane.net,makane.org,makane.info,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk,makane.ca,makane.co,makane.io,makane.me,makane.mobi,makane.us,makane.uk",
+       content: "vueye,template starter,vue.js,vue,vue3"
     },
     {
       name: "robots",
@@ -33,7 +33,7 @@ useHead({
     {
       hid: "og:image",
       name: "og:image",
-      content: homeImg,
+      content: 'https://github.com/boussadjra/vueye/blob/main/src/assets/img/screenshots/home.png',
     },
     {
       hid: "og:url",
@@ -69,7 +69,7 @@ useHead({
       hid: "twitter:image",
       name: "twitter:image",
       //@ts-ignore
-      content: homeImg,
+      content: 'https://github.com/boussadjra/vueye/blob/main/src/assets/img/screenshots/home.png',
     },
     {
       hid: "twitter:site",
