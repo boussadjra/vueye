@@ -139,7 +139,7 @@ let features = [
         <div class="flex flex-col mb-4 md:text-left">
           <h1 class="text-6xl font-bold uppercase text-primary-500 dark:text-primary-400"> Vueye
            <span class="text-xl block font-bold text-primary-500 dark:text-primary-400">
-            A Vue.js 3 template
+             Vue.js 3 template
           </span>
           </h1>
          
