@@ -1,9 +1,14 @@
-const  linkProps={
-    link:{
-     type: Boolean,
-     default: false,
+const linkProps = {
+    link: {
+        type: Boolean,
+        default: false,
         description: "Make the component a link",
-    }
- }
- 
- export default linkProps;
+    },
+    to : {
+        type: [String, Object],
+        default: "",
+        description: "The route to link to",
+    },
+}
+
+export default linkProps;

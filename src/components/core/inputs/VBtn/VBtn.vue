@@ -43,10 +43,22 @@ const classes = computed(() => [
 
 const currentTag = computed(() => props.link ? 'a' : props.tag)
 
+const router = useRouter()
+const emit = defineEmits(['click'])
+
+function handleClick(e: Event) {
+  if (props.to) {
+    router.push(props.to);
+    return;
+  }
+  emit('click', e)
+
+}
+
 </script>
 
 <template>
-   <component :is="currentTag" :class="classes" :style="variantStyle">
+   <component :is="currentTag" :class="classes" :style="variantStyle" @click="handleClick">
       <slot name="prepend">
          <span v-if="prepend" :class="`prepend ${prepend}`" />
       </slot>

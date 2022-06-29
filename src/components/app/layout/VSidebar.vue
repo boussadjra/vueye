@@ -48,6 +48,10 @@ const sidebarItems = computed(() => [
                 path: '/components/avatars'
             },
             {
+                title: 'Badges',
+                path: '/components/badges'
+            },
+            {
                 title: 'Buttons',
                 path: '/components/buttons'
             },

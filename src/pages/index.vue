@@ -11,6 +11,7 @@ useHead({
     {
       name: 'description',
       content: 'The Vueye home page',
+       image:'https://github.com/boussadjra/vueye/blob/main/src/assets/img/screenshots/home.png'
     },
     {
       name: "keywords",
@@ -181,8 +182,6 @@ let features = [
             <VAvatar corner="full" :src="flower3"></VAvatar>
             <VAvatar corner="xl" :src="landscape" alt="vue"></VAvatar>
             <VAvatar class="text-white bg-green-600 dark:bg-green-700" corner="full">A </VAvatar>
-
-
           </div>
         </div>
       </div>

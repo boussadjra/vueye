@@ -13,10 +13,7 @@ watch(sidebarCollapsed, (val) => {
 const { t, availableLocales, locale } = useI18n();
 //watch locale
 watch(locale, (val) => {
- 
-    if (val === 'ar') {
-        document.body.setAttribute('dir', 'rtl')
-    }
+         document.body.setAttribute('dir', val === 'ar'?'rtl':'ltr')
 })
 
 

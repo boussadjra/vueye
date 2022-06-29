@@ -96,11 +96,11 @@ Is a Vue.js 3 template starter with many components styled using Tailwind CSS an
 
 ## Try it now!
 
-> Vitesse requires Node >=14
+> This template is based on [vitesse](https://github.com/antfu/vitesse) and it requires Node >=14
 
 ### GitHub Template
 
-[Create a repo from this template on GitHub](https://github.com/antfu/vitesse/generate).
+[Create a repo from this template on GitHub](https://github.com/boussadjra/vueye/generate).
 
 ### Clone to local
 
