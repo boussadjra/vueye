@@ -21,9 +21,6 @@ const route = useRoute()
 onMounted(() => {
 
     let path = route.path
-    console.log('---------index-----------')
-    console.log(path, sidebarItems.value.findIndex(item => item.path.startsWith(path)))
-    console.log('--------------------')
     setCurrentIndex(sidebarItems.value.findIndex(item => path.startsWith(item.path)))
 
 })
@@ -59,6 +56,10 @@ const sidebarItems = computed(() => [
                 title: 'Button groups',
                 path: '/components/button-groups'
             },
+            {
+                title: 'Cards',
+                path: '/components/cards'
+            },
 
         ]
     },
@@ -88,18 +89,18 @@ const sidebarItems = computed(() => [
 <template>
     <!-- sidebar -->
     <aside
-        :class="`${sidebarCollapsed ? 'md:w-16 collapsed' : 'md:w-64'} sidebar bg-primary-600 dark:bg-primary-700 transition-width duration-700 w-full top-0 md:fixed bottom-0 z-30 flex-shrink-0   overflow-y-auto  lg:block`">
+        :class="`${sidebarCollapsed ? 'md:w-16 collapsed' : 'md:w-64'} sidebar overflow-hidden bg-primary-600 dark:bg-primary-700 transition-width duration-700 w-full top-0 md:fixed bottom-0 z-30 flex-shrink-0     lg:block`">
         <div class='flex flex-col h-full'>
-            <div class='flex items-center justify-center h-16 text-5xl bg-primary-900 '>
+            <div class='flex items-center justify-center h-16 text-5xl bg-primary-900 absolute top-0 left-0 right-0 '>
 
                 <RouterLink to="/" class='i-carbon-flash-filled text-sky-400'>
 
                 </RouterLink>
 
             </div>
-            <div class='mt-5'>
+            <div class='mt-5 absolute w-full left-0  top-16 '>
                 <nav class='flex-1 mt-5 text-xs font-medium leading-5 md:text-sm '>
-                    <ul class='m-0 ml-0 list-none'>
+                    <ul class='m-0 ml-0 list-none max-h-screen overflow-auto'>
                         <li v-for="(item, index) in sidebarItems" :key="item.title"
                             :class="` ${currentIndex === index ? 'bg-primary-600' : ''}`">
                             <a @click="setCurrentIndex(index)"

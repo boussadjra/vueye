@@ -7,6 +7,11 @@
         <VSidebar />
         <main class="w-full min-h-screen pt-16 pb-20 main-content text-slate-600 dark:text-slate-50 dark:bg-primary-800">
             <RouterView />
+
+            <div class="fixed bottom-2 right-2">
+              <VBtn tag="a" href="#top" icon="i-carbon-chevron-up" variant="secondary"> </VBtn>
+            
+            </div>
         </main>
 
     </div>

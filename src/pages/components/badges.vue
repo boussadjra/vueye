@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import BadgeProps from '~/components/core/data-display/VBadge/BadgeProps';
+import BadgeProps from '~/components/core/data-display/VBadge/badgeProps';
 import landscape from '~/assets/img/landscape.jpg';
 
 useHead({
@@ -14,7 +14,7 @@ const count=ref(1)
 
 <template>
   <ComponentsDemo title="Badges">
-    <ComponentsDemoItem title="Variants">
+    <ComponentsDemoItem title="Variants (solid & smooth)">
       <div class="flex flex-wrap gap-2 gap-x-12">
         <VBadge content="Default">
         </VBadge>

@@ -8,9 +8,7 @@ const props = defineProps(badgeProps)
 const slots = useSlots()
 const slottedNodes = slots.default?.()
 
-console.log('-------slottedNodes-------------')
-console.log(slottedNodes)
-console.log('--------------------')
+
 
 if (slottedNodes && slottedNodes.length > 1) {
     throw Error('VBadge: only one slot is allowed')

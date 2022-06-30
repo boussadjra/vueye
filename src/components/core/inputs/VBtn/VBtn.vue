@@ -77,7 +77,7 @@ function handleClick(e: Event) {
 
 <style scoped>
 .btn {
-   @apply h-max flex whitespace-nowrap justify-center shadow-md hover:shadow items-center transition-colors duration-300 cursor-pointer capitalize border-2
+   @apply h-max flex whitespace-nowrap justify-center shadow-md hover:shadow items-center  duration-300 cursor-pointer capitalize hover:transform hover:scale-105 transition-all 
 }
 
 .btn.disabled {
@@ -114,7 +114,7 @@ function handleClick(e: Event) {
 }
 
 .btn.icon {
-   @apply rounded-full
+   @apply rounded-full border-0
 }
 
 .btn.icon.xs {

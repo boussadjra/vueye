@@ -13,6 +13,7 @@ useHead({
 
 <template>
 
+
     <ComponentsDemo title="Buttons">
         <ComponentsDemoItem title="Variants">
             <div class="flex flex-wrap space-x-2 space-y-2 rtl:space-x-reverse">
