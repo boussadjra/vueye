@@ -132,4 +132,8 @@ function handleClick(e: Event) {
 .btn.icon.lg {
    @apply p-5 text-2xl
 }
+
+:slotted(.badge){
+ @apply ml-2 rtl:mr-2 rtl:ml-0
+}
 </style>

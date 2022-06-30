@@ -5,14 +5,36 @@ import badgeProps from './badgeProps';
 
 const props = defineProps(badgeProps)
 
-const slots=useSlots()
+const slots = useSlots()
+const slottedNodes = slots.default?.()
+
+console.log('-------slottedNodes-------------')
+console.log(slottedNodes)
+console.log('--------------------')
+
+if (slottedNodes && slottedNodes.length > 1) {
+    throw Error('VBadge: only one slot is allowed')
+}
+const classesOfSlottedNode = computed(() => {
+    if (slottedNodes && slottedNodes.length) {
+        let [node] = slottedNodes
+        //@ts-ignore
+        return `${node.props?.corner?'slotted_corner':''} slotted_corner--${node.props?.corner} slotted--${node.props?.size} slotted_el--${node?.type?.name}`
+    }
+})
+
+
+
+
 const { variantClasses } = useVariant(toPartialRefs(props, ['variant']))
 let classes = computed(() => [
-    `badge badge--${variantClasses.value}`
-    ,
+    `badge badge--${variantClasses.value}`,
+    classesOfSlottedNode.value,
     {
         'smooth': props.smooth,
-        'slotted':slots.default
+        'slotted': slots.default,
+        'empty': !props.content,
+
     }
 ])
 </script>
@@ -25,42 +47,81 @@ let classes = computed(() => [
 
 <style scoped>
 .badge {
-    @apply relative
+    @apply relative inline-block h-max
 }
-.badge.slotted::before{
-    @apply absolute z-10 -right-3 -top-4 text-xs
+
+.badge.slotted::after {
+
+    @apply absolute z-10 top-0 right-0 inline-flex items-center justify-center text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2
 }
-.badge::before {
+
+.badge.empty::after {
+    content: '';
+    @apply right-2 top-1 h-3 w-3 rounded-full
+}
+
+
+.badge::after {
     content: attr(data-label);
     clear: both;
     @apply p-1 text-sm rounded
 }
 
-.badge--default::before {
+.slotted_el--v-avatar::after{
+    @apply  !top-auto ;
+}
+
+.slotted_corner--full.slotted--xs::after {
+    @apply bottom-0 top-auto  right-0
+}
+.slotted_corner--full.slotted--xs::after {
+    @apply bottom-0 top-auto  right-0
+}
+.slotted_corner--full.slotted--sm::after {
+    @apply bottom-0 top-auto  right-1
+}
+.slotted_corner--full.slotted--md::after {
+    @apply bottom-1 top-auto  right-1
+}
+.slotted_corner--full.slotted--lg::after {
+    @apply !bottom-2 top-auto  right-2
+}
+.slotted_corner--full.slotted--xl::after {
+    @apply !bottom-3 top-auto  right-3
+}
+.slotted_corner--full.slotted--xxl::after {
+    @apply !bottom-4 top-auto  right-4
+}
+
+.slotted_corner:not(.slotted_corner--full):after{
+    @apply -bottom-2 top-auto  !right-1
+}
+
+.badge--default::after {
     @apply bg-gray-500 text-white
 }
 
-.badge--primary::before {
+.badge--primary::after {
     @apply bg-primary-500 text-white
 }
 
-.badge--secondary::before {
+.badge--secondary::after {
     @apply bg-secondary-500 text-white
 }
 
-.badge--success::before {
+.badge--success::after {
     @apply bg-green-500 text-white
 }
 
-.badge--info::before {
+.badge--info::after {
     @apply bg-blue-500 text-white
 }
 
-.badge--warning::before {
+.badge--warning::after {
     @apply bg-amber-500 text-white
 }
 
-.badge--error::before {
+.badge--error::after {
     @apply bg-red-500 text-white
 }
 </style>

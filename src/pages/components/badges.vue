@@ -1,13 +1,15 @@
 <script setup lang="ts">
-// import BadgeProps from '~/components/core/data-display/VBadge/BadgeProps';
+import BadgeProps from '~/components/core/data-display/VBadge/BadgeProps';
+import landscape from '~/assets/img/landscape.jpg';
 
 useHead({
   title: 'Badges'
 
 })
 
+const avatarSizes = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl']
 
-
+const count=ref(1)
 </script> 
 
 <template>
@@ -25,23 +27,52 @@ useHead({
 
       </div>
     </ComponentsDemoItem>
-    <ComponentsDemoItem title="On icon">
-      <div class="flex flex-wrap gap-2 gap-x-12">
+    <ComponentsDemoItem title="With Icons and text :">
+      <div class="flex flex-wrap gap-2 gap-x-12 mt-6">
 
         <VBadge content="+2" variant="secondary">
-        <div class="i-carbon-notification-filled text-3xl"></div>
+          <div class="i-carbon-notification-filled text-3xl"></div>
+        </VBadge>
+        <VBadge variant="error">
+          <div class="i-carbon-notification-filled text-3xl"></div>
+        </VBadge>
+        <VBadge variant="error">
+          <div class="i-carbon-home text-3xl"></div>
         </VBadge>
         <VBadge content="new" variant="secondary">
-     badges
+          badges
         </VBadge>
-       
+
+      </div>
+    </ComponentsDemoItem>
+    <ComponentsDemoItem title="With Avatars">
+      <div class="flex flex-wrap gap-2 gap-x-12 mt-6">
+        <VBadge v-for="(size) in avatarSizes" :key="size" variant="error">
+          <VAvatar :src="landscape" :size="size" corner="full"></VAvatar>
+        </VBadge>
+      </div>
+      <div class="flex flex-wrap gap-2 gap-x-12 mt-6">
+        <VBadge v-for="(size) in avatarSizes" :key="size" variant="success">
+          <VAvatar :size="size" corner="md">C </VAvatar>
+        </VBadge>
+
+      </div>
+    </ComponentsDemoItem>
+    <ComponentsDemoItem title="In Button :">
+      <div class="flex flex-wrap gap-2 gap-x-12 mt-6">
+        <VBtn variant="primary" smooth @click="count++">Count
+          <template #append>
+            <VBadge :content="`+${count}`" variant="success"></VBadge>
+          </template>
+        </VBtn>
+
       </div>
     </ComponentsDemoItem>
 
 
 
   </ComponentsDemo>
-  <!-- <PropsDoc :component-props="BadgeProps" /> -->
+  <PropsDoc :component-props="BadgeProps" />
 </template>
 <route lang="yaml">
 meta:

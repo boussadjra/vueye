@@ -37,6 +37,11 @@ function onImgLoadError(e: Event) {
 
 
 </script>
+<script lang="ts">
+export default defineComponent({
+    name:'v-avatar',
+})
+</script>
 <template>
     <div :class="[cornerClass, sizeClasses, textSizes[size]]" class="font-bold bg-gray-300 centered avatar dark:bg-gray-600">
         <slot v-if="slots.default"></slot>
