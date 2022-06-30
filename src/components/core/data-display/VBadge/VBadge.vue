@@ -28,7 +28,7 @@ const classesOfSlottedNode = computed(() => {
 
 const { variantClasses } = useVariant(toPartialRefs(props, ['variant']))
 let classes = computed(() => [
-    `badge badge--${variantClasses.value}`,
+    `badge  badge--${variantClasses.value}`,
     classesOfSlottedNode.value,
     {
         'smooth': props.smooth,
@@ -100,28 +100,49 @@ let classes = computed(() => [
 .badge--default::after {
     @apply bg-gray-500 text-white
 }
+.smooth.badge--default::after {
+   @apply bg-gray-300 dark:bg-gray-800  text-gray-500 dark:text-gray-300 
+}
 
 .badge--primary::after {
     @apply bg-primary-500 text-white
+}
+.smooth.badge--primary::after {
+   @apply bg-primary-100 dark:bg-primary-800  text-primary-700 dark:text-primary-300 
 }
 
 .badge--secondary::after {
     @apply bg-secondary-500 text-white
 }
+.smooth.badge--secondary::after {
+   @apply bg-secondary-100 dark:bg-secondary-800  text-secondary-700 dark:text-secondary-300 
+}
 
 .badge--success::after {
     @apply bg-green-500 text-white
+}
+.smooth.badge--success::after {
+   @apply bg-green-100 dark:bg-green-800  text-green-700 dark:text-green-300 
 }
 
 .badge--info::after {
     @apply bg-blue-500 text-white
 }
+.smooth.badge--info::after {
+   @apply bg-blue-100 dark:bg-blue-800  text-blue-700 dark:text-blue-300 
+}
 
 .badge--warning::after {
     @apply bg-amber-500 text-white
 }
+.smooth.badge--warning::after {
+   @apply bg-amber-100 dark:bg-amber-800  text-amber-700 dark:text-amber-300 
+}
 
 .badge--error::after {
     @apply bg-red-500 text-white
+}
+.smooth.badge--error::after {
+   @apply bg-red-100 dark:bg-red-800  text-red-700 dark:text-red-300 
 }
 </style>

@@ -18,12 +18,23 @@ const count=ref(1)
       <div class="flex flex-wrap gap-2 gap-x-12">
         <VBadge content="Default">
         </VBadge>
-        <VBadge content="Primary" variant="primary" smooth></VBadge>
+        <VBadge content="Primary" variant="primary" ></VBadge>
         <VBadge content="Secondary" variant="secondary"></VBadge>
         <VBadge content="Success" variant="success"></VBadge>
         <VBadge content="Info" variant="info"></VBadge>
         <VBadge content="Warning" variant="warning"></VBadge>
         <VBadge content="Error" variant="error"></VBadge>
+
+      </div>
+      <div class="flex flex-wrap gap-2 gap-x-12 mt-4">
+        <VBadge smooth content="Default">
+        </VBadge>
+        <VBadge smooth content="Primary" variant="primary" ></VBadge>
+        <VBadge smooth content="Secondary" variant="secondary"></VBadge>
+        <VBadge smooth content="Success" variant="success"></VBadge>
+        <VBadge smooth content="Info" variant="info"></VBadge>
+        <VBadge smooth content="Warning" variant="warning"></VBadge>
+        <VBadge smooth content="Error" variant="error"></VBadge>
 
       </div>
     </ComponentsDemoItem>
