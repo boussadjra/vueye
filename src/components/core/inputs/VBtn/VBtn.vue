@@ -77,11 +77,11 @@ function handleClick(e: Event) {
 
 <style scoped>
 .btn {
-   @apply h-max flex whitespace-nowrap justify-center shadow-md hover:shadow items-center  duration-300 cursor-pointer capitalize hover:transform hover:scale-105 transition-all 
+   @apply h-max flex whitespace-nowrap justify-center border-2 shadow-md hover:shadow items-center  duration-300 cursor-pointer capitalize hover:transform hover:scale-105 transition-all 
 }
 
 .btn.disabled {
-   @apply bg-gray-400 cursor-not-allowed shadow-none
+   @apply bg-gray-400 cursor-not-allowed shadow-none border-gray-400 hover:scale-100
 }
 
 .btn:not(.text),

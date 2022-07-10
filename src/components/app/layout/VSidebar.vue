@@ -49,6 +49,10 @@ const sidebarItems = computed(() => [
                 path: '/components/badges'
             },
             {
+                title: 'Breadcrumbs',
+                path: '/components/breadcrumbs'
+            },
+            {
                 title: 'Buttons',
                 path: '/components/buttons'
             },
@@ -91,16 +95,16 @@ const sidebarItems = computed(() => [
     <aside
         :class="`${sidebarCollapsed ? 'md:w-16 collapsed' : 'md:w-64'} sidebar overflow-hidden bg-primary-600 dark:bg-primary-700 transition-width duration-700 w-full top-0 md:fixed bottom-0 z-30 flex-shrink-0     lg:block`">
         <div class='flex flex-col h-full'>
-            <div class='flex items-center justify-center h-16 text-5xl bg-primary-900 absolute top-0 left-0 right-0 '>
+            <div class='absolute top-0 left-0 right-0 flex items-center justify-center h-16 text-5xl bg-primary-900 '>
 
                 <RouterLink to="/" class='i-carbon-flash-filled text-sky-400'>
 
                 </RouterLink>
 
             </div>
-            <div class='mt-5 absolute w-full left-0  top-16 '>
+            <div class='absolute left-0 w-full mt-5 top-16 '>
                 <nav class='flex-1 mt-5 text-xs font-medium leading-5 md:text-sm '>
-                    <ul class='m-0 ml-0 list-none max-h-screen overflow-auto'>
+                    <ul class='max-h-screen m-0 ml-0 overflow-auto list-none'>
                         <li v-for="(item, index) in sidebarItems" :key="item.title"
                             :class="` ${currentIndex === index ? 'bg-primary-600' : ''}`">
                             <a @click="setCurrentIndex(index)"
@@ -129,7 +133,7 @@ const sidebarItems = computed(() => [
             </div>
         </div>
         <div v-if="!sidebarCollapsed"
-            class='md:absolute bottom-0 left-0 right-0 h-12 p-2 bg-primary-700 dark:bg-primary-900'>
+            class='bottom-0 left-0 right-0 h-12 p-2 md:absolute bg-primary-700 dark:bg-primary-900'>
             <div class="flex items-center justify-around w-full h-full space-x-2 text-xl text-white">
                 <div i="carbon-notification cursor-pointer" />
                 <div i="carbon-chat cursor-pointer" />

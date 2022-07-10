@@ -1,20 +1,17 @@
 <script setup lang="ts">
-// import CardProps from '~/components/core/data-display/VCard/CardProps';
-import landscape from '~/assets/img/landscape.jpg';
+import cardProps from '~/components/core/surface/VCard/cardProps';
 
+import landscape from '~/assets/img/landscape.jpg';
 useHead({
   title: 'Cards'
 
 })
-
-
-
 </script> 
 
 <template>
   <ComponentsDemo title="Cards">
     <ComponentsDemoItem title="Basic card (solid and outlined )">
-      <div class="flex  gap-2 gap-x-12">
+      <div class="flex gap-2 gap-x-12">
         <VCard>
           <template #header>Card title</template>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores laudantium molestias aliquid, temporibus
@@ -32,7 +29,7 @@ useHead({
 
     </ComponentsDemoItem>
     <ComponentsDemoItem title="Card with media">
-      <div class="flex  gap-2 gap-x-12">
+      <div class="flex gap-2 gap-x-12">
         <VCard>
 
           <template #media>
@@ -62,8 +59,36 @@ useHead({
       </div>
 
     </ComponentsDemoItem>
+    <ComponentsDemoItem title="Media aside">
+      <div class="flex gap-2 gap-x-12">
+        <VCard media-aside>
+          <template #media>
+            <img src="https://images.unsplash.com/photo-1580133318324-f2f76d987dd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+          </template>
+          <template #header>Leaf </template>
+          <p class="text-sm">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aspernatur unde harum perferendis
+            suscipit numquam commodi aut quia consequatur, doloremque ab beatae aliquam impedit sit quos praesentium
+            sequi sed fugiat.
+
+          </p>
+          <template #footer>
+            <div class="flex gap-2">
+              <VBadge content="leaf" variant="success" smooth></VBadge>
+              <VBadge content="water" variant="success" smooth></VBadge>
+              <VBadge content="biology" variant="success" smooth></VBadge>
+              <VBadge content="tree" variant="success" smooth></VBadge>
+            </div>
+          </template>
+
+        </VCard>
+
+
+      </div>
+
+    </ComponentsDemoItem>
     <ComponentsDemoItem title="Block Card">
-      <div class="flex  gap-2 gap-x-12">
+      <div class="flex gap-2 gap-x-12">
         <VCard block>
           <template #media>
             <img :src="landscape" alt="">
@@ -91,14 +116,14 @@ useHead({
 
     </ComponentsDemoItem>
     <ComponentsDemoItem title="Card with actions">
-      <div class="flex  gap-2 gap-x-12">
+      <div class="flex gap-2 gap-x-12">
         <VCard>
           <template #header>Card title</template>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores laudantium molestias aliquid, temporibus
           odio expedita aperiam soluta. Tempore enim molestias voluptatibus eum. Dolores, quas? Veritatis saepe
           reprehenderit maxime a modi!
           <template #footer>
-            <div class="flex gap-2 flex-row-reverse  space-x-reverse">
+            <div class="flex flex-row-reverse gap-2 space-x-reverse">
               <VBtn size="sm" variant="primary"> Add </VBtn>
               <VBtn size="sm" outlined variant="error"> Cancel </VBtn>
             </div>
@@ -110,7 +135,7 @@ useHead({
           odio expedita aperiam soluta. Tempore enim molestias voluptatibus eum. Dolores, quas? Veritatis saepe
           reprehenderit maxime a modi!
           <template #footer>
-            <div class="flex gap-2 justify-end  ">
+            <div class="flex justify-end gap-2 ">
               <VBtn size="lg" text icon="i-carbon-favorite-filled" variant="secondary" class=""> </VBtn>
 
               <VBtn size="lg" text icon="i-carbon-chat"> </VBtn>
@@ -128,7 +153,7 @@ useHead({
 
 
   </ComponentsDemo>
-  <!-- <PropsDoc :component-props="CardProps" /> -->
+  <PropsDoc :component-props="cardProps" />
 </template>
 <route lang="yaml">
 meta:

@@ -67,7 +67,8 @@ export default function useVariant( options: {
         variantClasses: classes,
         variantStyle: computed(() => ({
             backgroundColor: options.bgColor?.value,
-            color: options.textColor?.value
+            color: options.textColor?.value,
+            borderColor:options.bgColor?.value,
         })),
     }
 }

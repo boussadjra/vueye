@@ -18,6 +18,7 @@ declare module '@vue/runtime-core' {
     VAvatar: typeof import('./components/core/data-display/VAvatar/VAvatar.vue')['default']
     VAvatarGroup: typeof import('./components/core/data-display/VAvatar/VAvatarGroup.vue')['default']
     VBadge: typeof import('./components/core/data-display/VBadge/VBadge.vue')['default']
+    VBreadcrumb: typeof import('./components/core/navigation/VBreadcrumb/VBreadcrumb.vue')['default']
     VBtn: typeof import('./components/core/inputs/VBtn/VBtn.vue')['default']
     VBtnGroup: typeof import('./components/core/inputs/VBtnGroup/VBtnGroup.vue')['default']
     VCard: typeof import('./components/core/surface/VCard/VCard.vue')['default']

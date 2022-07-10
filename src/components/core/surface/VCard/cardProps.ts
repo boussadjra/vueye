@@ -11,7 +11,11 @@ const cardProps={
     tag:{
         type:String,
         default:"div"
-    }
+    },
+    mediaAside:{
+        type:Boolean,
+        default:false
+    },
 }
 
 export default cardProps
