@@ -11,11 +11,11 @@ useHead({
     {
       name: 'description',
       content: 'The Vueye home page',
-       image:'https://github.com/boussadjra/vueye/blob/main/src/assets/img/screenshots/home.png'
+      image: 'https://github.com/boussadjra/vueye/blob/main/src/assets/img/screenshots/home.png'
     },
     {
       name: "keywords",
-       content: "vueye,template starter,vue.js,vue,vue3"
+      content: "vueye,template starter,vue.js,vue,vue3"
     },
     {
       name: "robots",
@@ -25,8 +25,8 @@ useHead({
       hid: "og:title",
       name: "og:title",
       content: "The Vueye home page",
-      image:'https://github.com/boussadjra/vueye/blob/main/src/assets/img/screenshots/home.png'
-      
+      image: 'https://github.com/boussadjra/vueye/blob/main/src/assets/img/screenshots/home.png'
+
     },
     {
       hid: "og:description",
@@ -139,11 +139,11 @@ let features = [
       <div class="flex flex-col justify-center w-full h-full px-8 pt-6 pb-8 mb-4 rounded md:w-1/2  max-w-[400px]">
         <div class="flex flex-col mb-4 md:text-left">
           <h1 class="text-6xl font-bold uppercase text-primary-500 dark:text-primary-400"> Vueye
-           <span class="text-xl block font-bold text-primary-500 dark:text-primary-400">
-             Vue.js 3 template
-          </span>
+            <span class="block text-xl font-bold text-primary-500 dark:text-primary-400">
+              Vue.js 3 template
+            </span>
           </h1>
-         
+
           <p class="max-w-md py-4 text-base text-slate-600 dark:text-slate-100">
             A rich template with many components, which are built with Tailwind CSS And Vue.
           </p>
@@ -161,7 +161,7 @@ let features = [
         </div>
       </div>
       <div
-        class="w-full p-4 pr-10 mr-4 bg-gray-100 border-2 rounded-lg shadow-xl dark:bg-primary-800 md:w-1/2 border-primary-700 right-side dark:shadow-primary-800">
+        class="w-full p-4 pr-10 mr-4 bg-gray-100 border-2 rounded-lg shadow-xl dark:bg-primary-800 md:w-1/2 border-primary-100 dark:border-primary-700 right-side dark:shadow-primary-800">
         <div class="flex flex-col gap-2">
           <div class="flex flex-wrap gap-2">
             <VBtn>Button</VBtn>
@@ -178,10 +178,13 @@ let features = [
               reiciendis.
             </VAlert>
           </div>
-          <div class="flex gap-2">
+          <div class="flex items-center gap-2">
             <VAvatar corner="full" :src="flower3"></VAvatar>
             <VAvatar corner="xl" :src="landscape" alt="vue"></VAvatar>
             <VAvatar class="text-white bg-green-600 dark:bg-green-700" corner="full">A </VAvatar>
+            <VBadge smooth content="Secondary" variant="secondary"></VBadge>
+            <VBadge smooth content="Success" variant="success"></VBadge>
+            <VBadge content="Info" variant="info"></VBadge>
           </div>
         </div>
       </div>

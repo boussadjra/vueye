@@ -13,7 +13,7 @@ const router = useRouter()
         <!-- render the items separated by the divider -->
         <ul class="flex space-x-2 font-light rtl:space-x-reverse">
             <li v-for="(item, index) in items" class="flex items-center space-x-2 rtl:space-x-reverse">
-                <span>
+                <span class="mx-3">
                     <template v-if="index > 0">
                         <slot name="divider">{{ divider }}</slot>
                     </template>

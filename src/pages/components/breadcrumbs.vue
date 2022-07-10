@@ -39,7 +39,7 @@ const items = ref([
         </ComponentsDemoItem>
         <ComponentsDemoItem title="Custom divider">
             <div class="flex gap-2 gap-x-12">
-                 <VBreadcrumb :items="items">
+                <VBreadcrumb :items="items">
                     <template #divider>
                         <div i-carbon-arrow-right />
                     </template>
@@ -48,12 +48,17 @@ const items = ref([
         </ComponentsDemoItem>
         <ComponentsDemoItem title="Custom items">
             <div class="flex flex-col gap-2 gap-x-12">
-              <VBreadcrumb :items="items">
+                <VBreadcrumb :items="items">
                     <template #divider>
                         <div i-carbon-chevron-right />
                     </template>
                     <template #item="{ item }">
-                        <VBtn variant="primary" :disabled="item.disabled">{{ item.text }}</VBtn>
+                        <VBtn variant="primary" size="xs" :disabled="item.disabled">
+                            <template #prepend>
+                                <div :class="item.icon" class="mx-2" />
+                            </template>
+                            {{ item.text }}
+                        </VBtn>
                     </template>
                 </VBreadcrumb>
                 <VBreadcrumb :items="items">

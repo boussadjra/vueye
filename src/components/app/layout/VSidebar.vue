@@ -61,6 +61,10 @@ const sidebarItems = computed(() => [
                 path: '/components/button-groups'
             },
             {
+                title: 'Icons',
+                path: '/components/icons'
+            },
+            {
                 title: 'Cards',
                 path: '/components/cards'
             },
