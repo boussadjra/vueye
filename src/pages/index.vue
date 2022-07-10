@@ -131,7 +131,7 @@ let features = [
 
 <template>
   <main
-    class="relative flex flex-col items-center w-full h-full min-h-screen pt-16 overflow-hidden bg-slate-100 dark:bg-primary-900 dark:text-white">
+    class="container relative flex flex-col items-center w-full h-full min-h-screen pt-16 overflow-hidden bg-slate-100 dark:bg-primary-900 dark:text-white">
     <!-- landing page with tailwind -->
 
 
