@@ -17,7 +17,7 @@ import btnProps from './btnProps';
 const props = defineProps(btnProps)
 
 
-const { variantClasses, variantStyle } = useVariant(toPartialRefs(props, ['variant', 'bgColor', 'textColor']))
+const { variantClasses, variantStyle } = useVariant(props)
 const { sizeClasses } = useSize(toPartialRefs(props, ['size']))
 const { loadingClass } = useLoading(toPartialRefs(props, ['loading']))
 const { cornerClass } = useCorner(toPartialRefs(props, ['corner']))

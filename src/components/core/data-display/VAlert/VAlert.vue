@@ -1,13 +1,12 @@
 <script setup lang="ts">
 import useVariant from '~/composables/core/variant';
 import { useDismiss } from '~/composables/core/dismiss';
-import { toPartialRefs } from '~/utils/helpers';
 import alertProps from './alertProps';
 
 
 const props = defineProps(alertProps)
 
-const { variantClasses } = useVariant(toPartialRefs(props, ['variant']))
+const { variantClasses } = useVariant(props)
 
 const classes = computed(() => [
 

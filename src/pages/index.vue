@@ -185,7 +185,13 @@ let features = [
             <VBadge smooth content="Secondary" variant="secondary"></VBadge>
             <VBadge smooth content="Success" variant="success"></VBadge>
             <VBadge content="Info" variant="info"></VBadge>
+
           </div>
+          <div class="flex gap-2">
+                         <VTextField  label="Password :" type="password" prepend="i-carbon-password" append="i-carbon-view"/>
+
+          </div>
+
         </div>
       </div>
     </div>

@@ -54,21 +54,23 @@ export const variantProps = {
 }
 
 
-export default function useVariant( options: {
-    variant?: Ref<Variant | ExtendedVariant>,
-    bgColor?: Ref<string>,
-    textColor?: Ref<string>,
-}) {
+export default function useVariant(props:any) {
 
     const classes = computed(() => (
-        `${options.variant?.value}`))
-
+        `${props.variant}`))
+        watch(() => props, (val) => {
+            console.log('props ',val)
+        
+        }, {
+            deep: true
+        
+        })
     return {
         variantClasses: classes,
         variantStyle: computed(() => ({
-            backgroundColor: options.bgColor?.value,
-            color: options.textColor?.value,
-            borderColor:options.bgColor?.value,
+            backgroundColor: props.bgColor?.value,
+            color: props.textColor?.value,
+            borderColor:props.bgColor?.value,
         })),
     }
 }

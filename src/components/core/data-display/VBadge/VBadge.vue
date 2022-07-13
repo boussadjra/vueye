@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import useVariant from '~/composables/core/variant';
-import { toPartialRefs } from '~/utils/helpers';
 import badgeProps from './badgeProps';
 
 const props = defineProps(badgeProps)
@@ -24,7 +23,7 @@ const classesOfSlottedNode = computed(() => {
 
 
 
-const { variantClasses } = useVariant(toPartialRefs(props, ['variant']))
+const { variantClasses } = useVariant(props)
 let classes = computed(() => [
     `badge  badge--${variantClasses.value}`,
     classesOfSlottedNode.value,

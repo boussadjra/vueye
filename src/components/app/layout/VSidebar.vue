@@ -68,6 +68,10 @@ const sidebarItems = computed(() => [
                 title: 'Cards',
                 path: '/components/cards'
             },
+            {
+                title: 'Text Fields',
+                path: '/components/text-fields'
+            },
 
         ]
     },
