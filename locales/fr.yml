@@ -19,3 +19,21 @@ sidebar:
   projects: Projets
   calendar: Calendrier
   reports: Rapports
+auth:
+  login: Se connecter
+  logout: Se déconnecter
+  username: Nom d'utilisateur
+  password: Mot de passe
+  remember: Se souvenir de moi
+  forgot: Mot de passe oublié ?
+  reset: Réinitialiser le mot de passe
+  reset-link: Lien de réinitialisation du mot de passe envoyé
+  reset-sent: Lien de réinitialisation du mot de passe envoyé à votre adresse e-mail
+  reset-success: Le mot de passe a été réinitialisé avec succès
+  reset-fail: La réinitialisation du mot de passe a échoué
+  no-account: Vous n'avez pas de compte ?
+  register: S'inscrire
+  register-success: Vous avez été inscrit avec succès
+  register-fail: L'inscription a échoué
+  email: Adresse e-mail
+  email-placeholder: Adresse e-mail ou numéro de téléphone

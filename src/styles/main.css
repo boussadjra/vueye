@@ -25,8 +25,13 @@
   src: url("../assets/fonts/Rubik-VariableFont_wght.ttf") format("truetype-variations");
   font-weight: 1 999;
 } 
+@font-face {
+  font-family: "ReadexPro";
+  src: url("../assets/fonts/ReadexPro-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 1 999;
+} 
 
-html,
+
 body,
 #app {
   height: 100%;
@@ -34,13 +39,25 @@ body,
   padding: 0;
   font-family: 'Inter', sans-serif;
 }
+/**
+  * body rtl
+  */
+ body[dir='rtl'],  body[dir='rtl'] #app {
+  font-family: 'ReadexPro', sans-serif!important;
+
+}
+
 
 html.dark {
   background: #121212;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Rubik';
+  font-family: 'ReadexPro';
+}
+
+body[dir='rtl'] h1,body[dir='rtl'] h2,body[dir='rtl'] h3,body[dir='rtl'] h4,body[dir='rtl'] h5,body[dir='rtl'] h6 {
+  font-family:'ReadexPro';
 }
 
 #nprogress {

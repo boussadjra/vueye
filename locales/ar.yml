@@ -19,3 +19,21 @@ sidebar:
   projects: المشاريع
   calendar: التقويم
   reports: التقارير
+auth:
+  login: تسجيل الدخول
+  logout: تسجيل الخروج
+  username: اسم المستخدم
+  password: كلمة المرور
+  remember: تذكرني
+  forgot: نسيت كلمة المرور؟
+  reset: إعادة ضبط كلمة المرور
+  reset-link: إعادة ضبط كلمة المرور
+  reset-sent: تم إرسال رابط إعادة ضبط كلمة المرور
+  reset-success: تم إعادة ضبط كلمة المرور بنجاح
+  reset-fail: فشلت عملية إعادة ضبط كلمة المرور
+  no-account: ليس لديك حساب؟
+  register: تسجيل
+  register-success: تم تسجيل المستخدم بنجاح
+  register-fail: فشلت عملية تسجيل المستخدم
+  email: البريد الإلكتروني
+  email-placeholder: البريد الإلكتروني أو رقم الجوال

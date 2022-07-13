@@ -19,3 +19,21 @@ sidebar:
   projects: Projects
   calendar: Calendar
   reports: Reports
+auth:
+  login: Login
+  logout: Logout
+  username: Username
+  password: Password
+  remember: Remember me
+  forgot: Forgot password?
+  reset: Reset password
+  reset-link: Reset password link sent
+  reset-sent: Reset password link sent to your email
+  reset-success: Reset password successfully
+  reset-fail: Reset password failed
+  no-account: Don't have an account?
+  register: Register
+  register-success: Register successfully
+  register-fail: Register failed
+  email: Email
+  email-placeholder: Email or phone number

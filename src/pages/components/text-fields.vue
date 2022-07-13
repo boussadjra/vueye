@@ -34,6 +34,7 @@ const variantEmail = computed(() => {
 const showPwd = ref(false)
 const pwd = ref('')
 
+const {t}=useI18n()
 </script> 
 <template>
     <ComponentsDemo title="Text fields">
@@ -86,30 +87,27 @@ const pwd = ref('')
                 <VCard block>
                     <template #header>
                         <div class="flex justify-center">
-                            <h1 class="text-xl">Login</h1>
+                            <h1 class="text-xl">{{t('auth.login')}}</h1>
                         </div>
 
                     </template>
                     <div class="grid gap-4 place-content-center ">
-                        <VTextField label="User name" prepend="i-carbon-user" block/>
-                     <VTextField block v-model="pwd" label="Password :" :type="showPwd ? 'text' : 'password'"
-                    prepend="i-carbon-locked" @append-click="showPwd = !showPwd"
-                    :append="showPwd ? 'i-carbon-view' : 'i-carbon-view-off'" />
-
-              
+                        <VTextField :label="`${t('auth.username')} :`" prepend="i-carbon-user" block />
+                        <VTextField block v-model="pwd" :label="`${t('auth.password')} :`" :type="showPwd ? 'text' : 'password'"
+                            prepend="i-carbon-locked" @append-click="showPwd = !showPwd"
+                            :append="showPwd ? 'i-carbon-view' : 'i-carbon-view-off'" />
                         <VBtn variant="primary" block>
-                            Login
+                         {{t('auth.login')}}
                         </VBtn>
                     </div>
                     <template #footer>
                         <div class="flex flex-col items-center text-xs">
-                       
-                                <p><router-link to="/" class="!text-blue-500">Forgot password?</router-link></p>
-                                <p >
-                                    Don't have an account? <router-link to="/" class="!text-blue-500">Sign up</router-link>
-                                </p>
-                                
-                     
+                            <p>
+                                <router-link to="/" class="!text-blue-500">{{t('auth.forgot')}}</router-link>
+                            </p>
+                            <p>
+                                {{t('auth.no-account')}} <router-link to="/" class="!text-blue-500">{{t('auth.register')}}</router-link>
+                            </p>
                         </div>
 
                     </template>
