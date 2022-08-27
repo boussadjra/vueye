@@ -1,3 +1,21 @@
+auth:
+  email: البريد الإلكتروني
+  email-placeholder: البريد الإلكتروني أو رقم الجوال
+  forgot: نسيت كلمة المرور؟
+  login: تسجيل الدخول
+  logout: تسجيل الخروج
+  no-account: ليس لديك حساب؟
+  password: كلمة المرور
+  register: تسجيل
+  register-fail: فشلت عملية تسجيل المستخدم
+  register-success: تم تسجيل المستخدم بنجاح
+  remember: تذكرني
+  reset: إعادة ضبط كلمة المرور
+  reset-fail: فشلت عملية إعادة ضبط كلمة المرور
+  reset-link: إعادة ضبط كلمة المرور
+  reset-sent: تم إرسال رابط إعادة ضبط كلمة المرور
+  reset-success: تم إعادة ضبط كلمة المرور بنجاح
+  username: اسم المستخدم
 button:
   about: حول
   back: رجوع
@@ -6,34 +24,17 @@ button:
   toggle_dark: التغيير إلى الوضع المظلم
   toggle_langs: تغيير اللغة
 intro:
+  aka: معروف أيضا تحت مسمى
   desc: vite مثال لتطبيق
   dynamic-route: عرض لتوجيهات ديناميكية
   hi: مرحبا {name}
-  aka: معروف أيضا تحت مسمى
   whats-your-name: ما إسمك؟
 not-found: صفحة غير موجودة
 sidebar:
-  dashboard: لوحة القيادة
-  components: المكونات
-  team: الفريق
-  projects: المشاريع
   calendar: التقويم
+  components: المكونات
+  dashboard: لوحة القيادة
+  home: الرئيسية
+  projects: المشاريع
   reports: التقارير
-auth:
-  login: تسجيل الدخول
-  logout: تسجيل الخروج
-  username: اسم المستخدم
-  password: كلمة المرور
-  remember: تذكرني
-  forgot: نسيت كلمة المرور؟
-  reset: إعادة ضبط كلمة المرور
-  reset-link: إعادة ضبط كلمة المرور
-  reset-sent: تم إرسال رابط إعادة ضبط كلمة المرور
-  reset-success: تم إعادة ضبط كلمة المرور بنجاح
-  reset-fail: فشلت عملية إعادة ضبط كلمة المرور
-  no-account: ليس لديك حساب؟
-  register: تسجيل
-  register-success: تم تسجيل المستخدم بنجاح
-  register-fail: فشلت عملية تسجيل المستخدم
-  email: البريد الإلكتروني
-  email-placeholder: البريد الإلكتروني أو رقم الجوال
+  team: الفريق

@@ -1,3 +1,21 @@
+auth:
+  email: Email
+  email-placeholder: Email or phone number
+  forgot: Forgot password?
+  login: Login
+  logout: Logout
+  no-account: Don't have an account?
+  password: Password
+  register: Register
+  register-fail: Register failed
+  register-success: Register successfully
+  remember: Remember me
+  reset: Reset password
+  reset-fail: Reset password failed
+  reset-link: Reset password link sent
+  reset-sent: Reset password link sent to your email
+  reset-success: Reset password successfully
+  username: Username
 button:
   about: About
   back: Back
@@ -6,34 +24,17 @@ button:
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
 intro:
+  aka: Also known as
   desc: Opinionated Vite Starter Template
   dynamic-route: Demo of dynamic route
   hi: Hi, {name}!
-  aka: Also known as
   whats-your-name: What's your name?
 not-found: Not found
 sidebar:
-  dashboard: Dashboard
-  components: Components
-  team: Team
-  projects: Projects
   calendar: Calendar
+  components: Components
+  dashboard: Dashboard
+  home: Home
+  projects: Projects
   reports: Reports
-auth:
-  login: Login
-  logout: Logout
-  username: Username
-  password: Password
-  remember: Remember me
-  forgot: Forgot password?
-  reset: Reset password
-  reset-link: Reset password link sent
-  reset-sent: Reset password link sent to your email
-  reset-success: Reset password successfully
-  reset-fail: Reset password failed
-  no-account: Don't have an account?
-  register: Register
-  register-success: Register successfully
-  register-fail: Register failed
-  email: Email
-  email-placeholder: Email or phone number
+  team: Team

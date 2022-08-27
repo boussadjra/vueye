@@ -20,7 +20,6 @@ import Unocss from 'unocss/vite'
 import UnocssIcons from '@unocss/preset-icons'
 
 import {
-  dirResolver,
   DirResolverHelper
 } from 'vite-auto-import-resolvers'
 

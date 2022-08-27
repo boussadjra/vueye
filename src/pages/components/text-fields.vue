@@ -2,8 +2,9 @@
 <script setup lang="ts">
 import textFieldProps from '~/components/core/inputs/VTextField/textFieldProps'
 useHead({
-    title: 'Buttons',
+    title: 'Text fields',
 })
+
 const email = ref('')
 const variantEmail = computed(() => {
     if (email.value == '')

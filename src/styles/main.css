@@ -1,5 +1,5 @@
 @import './markdown.css';
-
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -63,6 +63,11 @@ body[dir='rtl'] h1,body[dir='rtl'] h2,body[dir='rtl'] h3,body[dir='rtl'] h4,body
 #nprogress {
   pointer-events: none;
 }
+/* width */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
 
 .prose{
 margin-bottom:40px;

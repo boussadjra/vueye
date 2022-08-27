@@ -1,3 +1,21 @@
+auth:
+  email: Adresse e-mail
+  email-placeholder: Adresse e-mail ou numéro de téléphone
+  forgot: Mot de passe oublié ?
+  login: Se connecter
+  logout: Se déconnecter
+  no-account: Vous n'avez pas de compte ?
+  password: Mot de passe
+  register: S'inscrire
+  register-fail: L'inscription a échoué
+  register-success: Vous avez été inscrit avec succès
+  remember: Se souvenir de moi
+  reset: Réinitialiser le mot de passe
+  reset-fail: La réinitialisation du mot de passe a échoué
+  reset-link: Lien de réinitialisation du mot de passe envoyé
+  reset-sent: Lien de réinitialisation du mot de passe envoyé à votre adresse e-mail
+  reset-success: Le mot de passe a été réinitialisé avec succès
+  username: Nom d'utilisateur
 button:
   about: À propos
   back: Retour
@@ -6,34 +24,17 @@ button:
   toggle_dark: Basculer en mode sombre
   toggle_langs: Changer de langue
 intro:
+  aka: Aussi connu sous le nom de
   desc: Exemple d'application Vite
   dynamic-route: Démo de route dynamique
   hi: Salut, {name}!
-  aka: Aussi connu sous le nom de
   whats-your-name: Comment t'appelles-tu ?
 not-found: Page non trouvée
 sidebar:
-  dashboard: Tableau de bord
-  components: Composants
-  team: Équipe
-  projects: Projets
   calendar: Calendrier
+  components: Composants
+  dashboard: Tableau de bord
+  home: Accueil
+  projects: Projets
   reports: Rapports
-auth:
-  login: Se connecter
-  logout: Se déconnecter
-  username: Nom d'utilisateur
-  password: Mot de passe
-  remember: Se souvenir de moi
-  forgot: Mot de passe oublié ?
-  reset: Réinitialiser le mot de passe
-  reset-link: Lien de réinitialisation du mot de passe envoyé
-  reset-sent: Lien de réinitialisation du mot de passe envoyé à votre adresse e-mail
-  reset-success: Le mot de passe a été réinitialisé avec succès
-  reset-fail: La réinitialisation du mot de passe a échoué
-  no-account: Vous n'avez pas de compte ?
-  register: S'inscrire
-  register-success: Vous avez été inscrit avec succès
-  register-fail: L'inscription a échoué
-  email: Adresse e-mail
-  email-placeholder: Adresse e-mail ou numéro de téléphone
+  team: Équipe
