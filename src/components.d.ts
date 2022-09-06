@@ -6,6 +6,7 @@ import '@vue/runtime-core'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     BurgerMenuBtn: typeof import('./components/app/utils/BurgerMenuBtn.vue')['default']
+    CollapseTransition: typeof import('./components/app/utils/CollapseTransition.vue')['default']
     ComponentsDemo: typeof import('./components/app/ComponentsDemo.vue')['default']
     ComponentsDemoItem: typeof import('./components/app/ComponentsDemoItem.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']

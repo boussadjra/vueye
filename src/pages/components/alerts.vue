@@ -120,7 +120,11 @@ function resetAlerts() {
         <VAlert border="left" variant="secondary"> </VAlert>
         <VAlert border="top" smooth variant="secondary"> </VAlert>
         <VAlert border="bottom" variant="success"> </VAlert>
-        <VAlert border="right" smooth variant="warning"> </VAlert>
+        <VAlert border="right" smooth variant="primary"> </VAlert>
+        <VAlert border="bottom" smooth variant="secondary"> </VAlert>
+        <VAlert border="top" smooth variant="info"> </VAlert>
+        <VAlert border="left" smooth variant="warning"> </VAlert>
+        <VAlert border="left" smooth variant="error"> </VAlert>
 
       </div>
     </ComponentsDemoItem>

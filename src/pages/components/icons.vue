@@ -914,7 +914,6 @@ const iconNames = [
     "i-carbon-error",
     "i-carbon-error-filled",
     "i-carbon-error-outline",
-    "i-carbon-exclamation",
     "i-carbon-export",
     "i-carbon-factor",
     "i-carbon-file-storage",

@@ -80,6 +80,10 @@ const sidebarItems = computed(() => [
         title: 'Text Fields',
         path: '/components/text-fields',
       },
+      {
+        title:'checkboxes',
+        path: '/components/checkboxes',
+      }
     ],
   },
   {
@@ -145,9 +149,10 @@ onMounted(() => {
                     item.title
                   }}</span>
                 </a>
+                <CollapseTransition>
                 <ul
                   v-if="item.children && !sidebarCollapsed && currentIndex === index"
-                  class="opacity-75"
+                  class="opacity-75 transition-height duration-1000"
                 >
                   <li
                     v-for="child in item.children"
@@ -163,6 +168,7 @@ onMounted(() => {
                     </RouterLink>
                   </li>
                 </ul>
+                </CollapseTransition>
               </li>
             </ul>
           </nav>

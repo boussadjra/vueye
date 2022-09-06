@@ -223,6 +223,9 @@ const slots = useSlots()
     @apply border-l-[6px] border-green-300
 }
 
+.smooth.primary.alert--border-left {
+@apply border-l-[6px] border-primary-400;
+}
 
 
 .fade-enter-active,

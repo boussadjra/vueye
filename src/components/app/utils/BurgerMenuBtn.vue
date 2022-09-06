@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const isOpen = ref(false)
-const genericburgerLine = 'h-0.5 w-6 my-1 rounded-full bg-gray-700 dark:bg-white transition ease transform duration-300'
+const genericburgerLine
+    = 'h-0.5 w-6 my-1 rounded-full bg-gray-700 dark:bg-white transition ease transform duration-300'
 const emit = defineEmits(['open'])
 
 function handleMenu() {
@@ -17,7 +18,11 @@ function handleMenu() {
           : 'opacity-50 group-hover:opacity-100'
       }`"
     />
-    <div :class="`${genericburgerLine} ${!isOpen ? ' translate-y-[1.7px] -translate-x-[2.4px]' : ''} opacity-50 group-hover:opacity-100`" />
+    <div
+      :class="`${genericburgerLine} ${
+        !isOpen ? ' translate-y-[1.7px] -translate-x-[2.4px]' : ''
+      } opacity-50 group-hover:opacity-100`"
+    />
     <div
       :class="`${genericburgerLine} ${
         !isOpen
