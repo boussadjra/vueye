@@ -31,11 +31,11 @@ let propsNames = computed(() => {
             <tbody>
                 <tr v-for="propName in propsNames">
                     <td class="px-4 py-2 " data-label="Prop Name">{{ propName }}</td>
-                    <td class="px-4 py-2 font-mono text-sm text-fuchsia-600"  data-label="Prop Type">
+                    <td class="px-4 py-2 font-mono text-sm text-fuchsia-700 dark:text-fuchsia-300"  data-label="Prop Type">
                     {{ componentProps[propName].type?.name }}
                     </td>
-                    <td class="px-4 py-2 font-mono text-sm text-cyan-500" v-if="typeof componentProps[propName].default=='boolean'"  data-label="Default value">{{  componentProps[propName].default }} </td>
-                    <td class="px-4 py-2 text-cyan-500" v-else-if="typeof componentProps[propName].default=='string'" data-label="Default value">'{{  componentProps[propName].default }}' </td>
+                    <td class="px-4 py-2 font-mono text-sm text-cyan-700" v-if="typeof componentProps[propName].default=='boolean'"  data-label="Default value">{{  componentProps[propName].default }} </td>
+                    <td class="px-4 py-2 text-cyan-700" v-else-if="typeof componentProps[propName].default=='string'" data-label="Default value">'{{  componentProps[propName].default }}' </td>
                     <td class="px-4 py-2 " v-else data-label="Default value">{{  componentProps[propName].default }} </td>
                     <td class="px-4 py-2 text-sm prose" v-html="componentProps[propName].description" data-label="Description"></td>
                 </tr>

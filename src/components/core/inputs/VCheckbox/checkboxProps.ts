@@ -1,40 +1,40 @@
-import blockProps from "~/composables/core/props/blockProps";
-import labelProps from "~/composables/core/props/labelProps";
-import hintProps from "~/composables/core/props/hintProps";
-import modelValueProps from "~/composables/core/props/modelValueProps";
-import { variantProps } from "~/composables/core/variant";
-import appendProps from "~/composables/core/props/appendProps";
+import type { PropType } from 'vue'
+import labelProps from '~/composables/core/props/labelProps'
+import disabledProps from '~/composables/core/props/disabledProps'
+import { variantProps } from '~/composables/core/variant'
+
+type CheckboxSize = 'sm' | 'md' | 'lg' | 'xl'
 
 const checkboxProps = {
-    ...labelProps,
-    ...hintProps,
-    ...variantProps,
-    ...modelValueProps,
-    ...blockProps,
-    ...appendProps,
-    type: {
-        type: String,
-        default: 'text',
-        description: 'The input type "text", "number" "email" ...'
-    },
-    tag: {
-        type: String,
-        default: 'input',
-        description: 'The input tag "input" "textarea"',
-        validator: (value: string) => {
-            return ['input', 'textarea'].includes(value);
-        }
+  ...labelProps,
+  ...disabledProps,
 
-    },
-    id: {
-        type: String,
-        default: '',
-        description: 'The id of the input bound to the label'
-    }
-
-
-
+  variant: {
+    ...variantProps.variant,
+    default: 'primary',
+   
+  },
+  id: {
+    type: String,
+    default: '',
+    description: 'The id of the input bound to the label',
+  },
+  modelValue: {
+    type: Boolean,
+    default: true,
+    description: 'The value of the input',
+  },
+  indeterminate: {
+    type: Boolean,
+    default: false,
+    description: 'The indeterminate state of the checkbox',
+  },
+  size: {
+    type: String as PropType<CheckboxSize>,
+    default: 'md',
+    validator: (value: CheckboxSize) => ['sm', 'md', 'lg', 'xl'].includes(value),
+    description: 'Set the size of the component (sm, md, lg, xl)',
+  },
 }
 
-
-export default checkboxProps;
+export default checkboxProps

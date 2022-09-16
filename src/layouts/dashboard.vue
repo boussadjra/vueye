@@ -9,7 +9,7 @@
       <RouterView />
 
       <div class="fixed bottom-2 right-2 rtl:right-auto rtl:left-2">
-        <VBtn tag="a" href="#top" icon="i-carbon-chevron-up" variant="secondary" />
+        <VBtn tag="a" href="#top" icon="i-carbon-chevron-up" variant="secondary" aria-label="Go to top" />
       </div>
     </main>
   </div>

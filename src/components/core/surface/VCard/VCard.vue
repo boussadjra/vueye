@@ -10,7 +10,7 @@ const { shapeClass } = useElevation(toPartialRefs(props, ['elevation', 'outlined
 const classes = computed(() => [
   'card',
   shapeClass.value,
-  props.outlined ? 'bg-transparent' : ' bg-white  dark:bg-primary-900',
+  props.outlined ? 'bg-transparent' : ' bg-white  dark:bg-primary-850',
   props.block ? 'w-full' : 'max-w-lg',
   {
     'card--media-aside': props.mediaAside,

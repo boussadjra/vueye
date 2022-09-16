@@ -81,7 +81,7 @@ const sidebarItems = computed(() => [
         path: '/components/text-fields',
       },
       {
-        title:'checkboxes',
+        title: 'Checkboxes',
         path: '/components/checkboxes',
       }
     ],
@@ -114,9 +114,9 @@ const sidebarClass = ref('')
 onMounted(() => {
   window.onscroll = () => {
     if (window.pageYOffset > 180)
-        sidebarClass.value = 'top-4 bottom-0'
+      sidebarClass.value = 'top-4 bottom-0'
     else
-        sidebarClass.value = 'top-48'
+      sidebarClass.value = 'top-48'
   }
 })
 </script>
@@ -131,43 +131,31 @@ onMounted(() => {
         <div class="absolute left-0 w-full mt-5 top-16">
           <nav class="flex-1 mt-5 text-xs font-medium leading-5 md:text-sm">
             <ul class="max-h-screen m-0 ml-0 list-none">
-              <li
-                v-for="(item, index) in sidebarItems"
-                :key="item.title"
-                :class="`${currentIndex === index ? 'bg-gray-100 dark:bg-primary-700 ' : ''} `"
-              >
-                <a
-                  :class="`${sidebarCollapsed ? 'justify-center' : ''}
-                  ${currentIndex === index ? 'bg-gray-200 dark:bg-primary-700' : ''}
-                   sidebar-item block py-4  px-4 flex items-center rtl:space-x-reverse space-x-2 cursor-pointer  decoration-none  leading-5  group  focus:outline-none  transition duration-150 ease-in-out`"
-                  @click="setCurrentIndex(index)"
-                >
+              <li v-for="(item, index) in sidebarItems" :key="item.title"
+                :class="`${currentIndex === index ? 'bg-gray-100 dark:bg-primary-700 ' : ''} `">
+                <a :href="item.path" :class="`${sidebarCollapsed ? 'justify-center' : ''}
+                                  ${currentIndex === index ? 'bg-gray-200 dark:bg-primary-700' : ''}
+                sidebar-item block py-4  px-4 flex items-center rtl:space-x-reverse space-x-2 cursor-pointer  decoration-none  leading-5  group  focus:outline-none  transition duration-150 ease-in-out`"
+                  @click="setCurrentIndex(index)">
                   <span :class="`${item.icon} text-lg block`" />
 
                   <span v-if="!sidebarCollapsed" class="block">{{ item.title }}</span>
                   <span v-if="!sidebarCollapsed && item.children" class="i-carbon-chevron-down">{{
-                    item.title
+                  item.title
                   }}</span>
                 </a>
                 <CollapseTransition>
-                <ul
-                  v-if="item.children && !sidebarCollapsed && currentIndex === index"
-                  class="opacity-75 transition-height duration-1000"
-                >
-                  <li
-                    v-for="child in item.children"
-                    :key="child.title"
-                    class="pl-4 hover:scale-105 transition-all"
-                  >
-                    <RouterLink
-                      :class="` block py-2 text-xs  px-4 flex items-center rtl:space-x-reverse space-x-2  decoration-none  leading-5  group  focus:outline-none focus:font-bold transition duration-150 ease-in-out`"
-                      :to="child.path"
-                    >
-                      <span class="i-carbon-software-resource" />
-                      <span v-if="!sidebarCollapsed">{{ child.title }}</span>
-                    </RouterLink>
-                  </li>
-                </ul>
+                  <ul v-if="item.children && !sidebarCollapsed && currentIndex === index"
+                    class="opacity-75 transition-height duration-1000">
+                    <li v-for="child in item.children" :key="child.title" class="pl-4 hover:scale-105 transition-all">
+                      <RouterLink
+                        :class="` block py-2 text-xs  px-4 flex items-center rtl:space-x-reverse space-x-2  decoration-none  leading-5  group  focus:outline-none focus:font-bold transition duration-150 ease-in-out`"
+                        :to="child.path" :href="child.path">
+                        <span class="i-carbon-software-resource" />
+                        <span v-if="!sidebarCollapsed">{{ child.title }}</span>
+                      </RouterLink>
+                    </li>
+                  </ul>
                 </CollapseTransition>
               </li>
             </ul>
@@ -180,10 +168,10 @@ onMounted(() => {
 
 <style scoped>
 .sidebar {
-    @apply fixed bottom-4 top-4 overflow-x-hidden overflow-y-auto w-64 bg-white dark:bg-primary-800 h-full md:h-[calc(100vh_-_6rem)] z-[999] select-none md:top-20 left-4 rtl:left-auto rtl:right-4 transition-all duration-500 rounded-lg p-2 shadow-md;
+  @apply fixed bottom-4 top-4 overflow-x-hidden overflow-y-auto w-64 bg-white dark:bg-primary-800 h-full md:h-[calc(100vh_-_6rem)] z-[999] select-none md:top-20 left-4 rtl:left-auto rtl:right-4 transition-all duration-500 rounded-lg p-2 shadow-md;
 }
 
 .sidebar__collapsed {
-    @apply w-12 md:w-16 h-12 md:h-auto ;
+  @apply w-12 md:w-16 h-12 md:h-auto;
 }
 </style>

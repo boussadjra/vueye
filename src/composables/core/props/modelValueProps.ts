@@ -1,8 +1,8 @@
-import { PropType } from "vue";
+
 
 const modelValueProps = {
     modelValue: {
-        type: [String, Number,Object],
+        type: [String, Number,Object,Boolean],
         default: null,
         description: 'The value of the input'
     },
