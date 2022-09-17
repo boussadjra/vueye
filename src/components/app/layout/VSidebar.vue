@@ -83,6 +83,10 @@ const sidebarItems = computed(() => [
       {
         title: 'Checkboxes',
         path: '/components/checkboxes',
+      },
+      {
+        title: 'Radio Buttons',
+        path: '/components/radio-buttons',
       }
     ],
   },
@@ -108,7 +112,7 @@ const sidebarItems = computed(() => [
   },
 ])
 
-// when scroll down with 100px offset, add class to sidebar to make it fixed
+
 const sidebar = ref<HTMLElement>()
 const sidebarClass = ref('')
 onMounted(() => {
@@ -133,7 +137,7 @@ onMounted(() => {
             <ul class="max-h-screen m-0 ml-0 list-none">
               <li v-for="(item, index) in sidebarItems" :key="item.title"
                 :class="`${currentIndex === index ? 'bg-gray-100 dark:bg-primary-700 ' : ''} `">
-                <a :href="item.path" :class="`${sidebarCollapsed ? 'justify-center' : ''}
+                <span :class="`${sidebarCollapsed ? 'justify-center' : ''}
                                   ${currentIndex === index ? 'bg-gray-200 dark:bg-primary-700' : ''}
                 sidebar-item block py-4  px-4 flex items-center rtl:space-x-reverse space-x-2 cursor-pointer  decoration-none  leading-5  group  focus:outline-none  transition duration-150 ease-in-out`"
                   @click="setCurrentIndex(index)">
@@ -143,7 +147,7 @@ onMounted(() => {
                   <span v-if="!sidebarCollapsed && item.children" class="i-carbon-chevron-down">{{
                   item.title
                   }}</span>
-                </a>
+                </span>
                 <CollapseTransition>
                   <ul v-if="item.children && !sidebarCollapsed && currentIndex === index"
                     class="opacity-75 transition-height duration-1000">

@@ -28,6 +28,7 @@ declare module '@vue/runtime-core' {
     VCard: typeof import('./components/core/surface/VCard/VCard.vue')['default']
     VCheckbox: typeof import('./components/core/inputs/VCheckbox/VCheckbox.vue')['default']
     VHeader: typeof import('./components/app/layout/VHeader.vue')['default']
+    VRadio: typeof import('./components/core/inputs/VRadio/VRadio.vue')['default']
     VSidebar: typeof import('./components/app/layout/VSidebar.vue')['default']
     VTextField: typeof import('./components/core/inputs/VTextField/VTextField.vue')['default']
   }
