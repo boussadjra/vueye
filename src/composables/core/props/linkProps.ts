@@ -4,7 +4,7 @@ const linkProps = {
         default: false,
         description: "Make the component a link",
     },
-    to : {
+    to: {
         type: [String, Object],
         default: "",
         description: "The route to link to",

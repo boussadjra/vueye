@@ -19,10 +19,23 @@ auth:
 button:
   about: About
   back: Back
+  change_lang: Change language
   go: GO
   home: Home
   toggle_dark: Toggle dark mode
   toggle_langs: Change languages
+hero:
+  cta: Get started
+  desc: >-
+    A rich template with many components, which are built with Tailwind CSS And
+    Vue.
+  github: github
+  subtitle: Vue.js 3 template
+home:
+  example:
+    alert: This is a warning alert, you can use it to show a warning message
+    password: password
+    rememberMe: Remember me
 intro:
   aka: Also known as
   desc: Opinionated Vite Starter Template

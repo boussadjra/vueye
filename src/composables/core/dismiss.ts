@@ -14,8 +14,7 @@ export const dismissProps = {
 
 export function useDismiss(emit: Function) {
 
-    function close() {
-   
+    function close() {   
         emit('update:closed', true)
     }
 

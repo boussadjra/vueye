@@ -49,6 +49,7 @@ export const variantProps = {
 
 export default function useVariant(props: any) {
   const classes = computed(() => `${props.variant}`)
+  console.log('props.variant ', props)
   watch(
     () => props,
     (val) => {
@@ -61,9 +62,9 @@ export default function useVariant(props: any) {
   return {
     variantClasses: classes,
     variantStyle: computed(() => ({
-      backgroundColor: props.bgColor?.value,
-      color: props.textColor?.value,
-      borderColor: props.bgColor?.value,
+      backgroundColor: props.bgColor,
+      color: props.textColor,
+      borderColor: props.bgColor,
     })),
   }
 }

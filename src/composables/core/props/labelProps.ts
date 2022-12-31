@@ -1,8 +1,8 @@
-const labelProps={
-    label:{
-        type:String,
-        default:'',
-        description:'The label of the input'
+const labelProps = {
+    label: {
+        type: String,
+        default: '',
+        description: 'The label of the input'
     },
 }
 

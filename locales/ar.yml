@@ -19,10 +19,23 @@ auth:
 button:
   about: حول
   back: رجوع
+  change_lang: تغيير اللغة
   go: تجربة
   home: الرئيسية
   toggle_dark: التغيير إلى الوضع المظلم
   toggle_langs: تغيير اللغة
+hero:
+  cta: ابدأ الآن
+  desc: >-
+    قالب متكامل مع العديد من المكونات، والتي تم بُنِيت باستخدام Tailwind CSS و
+    Vue.
+  github: جيثب
+  subtitle: نموذج Vue.js 3
+home:
+  example:
+    alert: هذا تنبيه تحذير ، يمكنك استخدامه لإظهار رسالة تحذير
+    password: كلمه السر
+    rememberMe: تذكرني
 intro:
   aka: معروف أيضا تحت مسمى
   desc: vite مثال لتطبيق

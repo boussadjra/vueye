@@ -1,8 +1,4 @@
-import { computed, Ref } from 'vue';
-
-
-
-
+import { computed } from 'vue';
 
 export const loadingProps = {
     loading: {
@@ -13,11 +9,10 @@ export const loadingProps = {
 }
 
 export function useLoading(props: {
-    loading: Ref<boolean>
+    loading: boolean
 }) {
 
-
-    let loadingClass = computed(() => ({ 'animate-spin': props.loading }))
+    const loadingClass = computed(() => ({ 'animate-spin': props.loading }))
 
     return {
         loadingClass: loadingClass.value

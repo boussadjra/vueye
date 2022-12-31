@@ -6,6 +6,7 @@ export const install: UserModule = ({ isClient, router }) => {
     return
 
   router.isReady().then(async () => {
+    //@ts-ignore
     const { registerSW } = await import('virtual:pwa-register')
     registerSW({ immediate: true })
   })

@@ -1,2 +1,4 @@
 dist
 public
+tailwind.config.js
+postcss.config.js

@@ -1,6 +1,5 @@
-import type { PropType, Ref } from 'vue';
+import type { PropType } from 'vue';
 import { computed } from 'vue';
-
 
 export const corners = ['none', 'sm', 'default', 'md', 'lg', 'xl', '2xl', 'full']
 
@@ -28,10 +27,10 @@ export const cornerProps = {
 }
 
 export function useCorner(props: {
-    corner: Ref<ICorner>
+    corner: ICorner
 }) {
 
-    let cornerClass = computed(() => `${borderRadius[props.corner.value]}`)
+    let cornerClass = computed(() => `${borderRadius[props.corner]}`)
 
     return {
         cornerClass: cornerClass

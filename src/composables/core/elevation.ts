@@ -1,9 +1,4 @@
-import type { PropType,Ref } from 'vue';
-// import { computed } from 'vue';
-// import { theme } from '@/composable/core/useVariant';
-
-
-
+import type { PropType } from 'vue';
 
 export const elevations = ['none', 'sm', 'md', 'lg', 'xl', '2xl']
 type IElevation = typeof elevations[number]
@@ -14,8 +9,6 @@ let shadows: Record<IElevation, string> = {
     'lg': 'shadow-lg focus:shadow-md active:shadow-md',
     'xl': 'shadow-xl focus:shadow-lg active:shadow-lg',
     '2xl': 'shadow-2xl focus:shadow-xl active:shadow-xl'
-
-
 }
 
 
@@ -26,13 +19,12 @@ export const elevationProps = {
     }
 }
 
-export function useElevation( props: {
-    elevation: Ref<IElevation>,
-    outlined: Ref<boolean>
+export function useElevation(props: {
+    elevation: IElevation,
+    outlined: boolean
 }) {
-   
 
     return {
-        shapeClass: computed(() => props.outlined.value? 'border border-slate-300 dark:border-slate-700':`${shadows[props.elevation.value]} shadow-slate-400 dark:shadow-primary-800`)
+        shapeClass: computed(() => props.outlined ? 'border border-slate-300 dark:border-slate-700' : `${shadows[props.elevation]} shadow-slate-400 dark:shadow-primary-800`)
     }
 }

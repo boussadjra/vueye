@@ -19,10 +19,25 @@ auth:
 button:
   about: À propos
   back: Retour
+  change_lang: Changer de langue
   go: Essayer
   home: Accueil
   toggle_dark: Basculer en mode sombre
   toggle_langs: Changer de langue
+hero:
+  cta: Commencer
+  desc: >-
+    Un modèle complet avec de nombreux composants, construit avec Tailwind CSS
+    et Vue.
+  github: github
+  subtitle: Modèle Vue.js 3
+home:
+  example:
+    alert: >-
+      Ceci est une alerte d'avertissement, vous pouvez l'utiliser pour afficher
+      un message d'avertissement
+    password: le mot de passe
+    rememberMe: Souviens-toi de moi
 intro:
   aka: Aussi connu sous le nom de
   desc: Exemple d'application Vite

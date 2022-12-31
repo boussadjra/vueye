@@ -1,4 +1,4 @@
-import type { PropType, Ref } from 'vue'
+import type { PropType } from 'vue'
 
 export const sizes = ['xs', 'sm', 'md', 'lg', 'xl', 'xxl']
 
@@ -13,8 +13,8 @@ export const sizeProps = {
   },
 }
 
-export function useSize(options: { size?: Ref<Size> }) {
-  const classes = computed(() => `${options.size?.value}`)
+export function useSize(props:any) {
+  const classes = computed(() => `${props.size}`)
   return {
     sizeClasses: classes,
   }

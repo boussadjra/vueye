@@ -1,11 +1,9 @@
 <script setup lang="ts">
-import alertProps from '~/components/core/data-display/VAlert/alertProps';
-
+import alertProps from "~/components/core/data-display/VAlert/alertProps";
 
 useHead({
-    title: 'Alerts'
-
-})
+  title: "Alerts",
+});
 
 const closedAlert1 = ref(false);
 const closedAlert2 = ref(false);
@@ -14,10 +12,7 @@ function resetAlerts() {
   closedAlert1.value = false;
   closedAlert2.value = false;
 }
-
-
-
-</script> 
+</script>
 
 <template>
   <ComponentsDemo title="Alerts">
@@ -72,7 +67,8 @@ function resetAlerts() {
           <template #prepend>
             <span class="i-carbon-idea"></span>
           </template>
-          <span class="font-bold">VAlert tip :</span> Use <code>#prepend</code> slot to customize the prepend icon.
+          <span class="font-bold">VAlert tip :</span> Use <code>#prepend</code> slot to
+          customize the prepend icon.
         </VAlert>
       </div>
     </ComponentsDemoItem>
@@ -91,19 +87,18 @@ function resetAlerts() {
           The product is added successfully.
         </VAlert>
         <div v-auto-animate>
-          <VBtn @click="resetAlerts" v-if="(closedAlert1 && closedAlert2)">Reset</VBtn>
+          <VBtn @click="resetAlerts" v-if="closedAlert1 && closedAlert2">Reset</VBtn>
         </div>
-
       </div>
     </ComponentsDemoItem>
     <ComponentsDemoItem title="Custom append icon">
       <div class="flex flex-wrap gap-2">
-
         <VAlert variant="info">
           <template #prepend>
             <span class="i-carbon-idea"></span>
           </template>
-          <span class="font-bold">VAlert tip :</span> Use <code>#prepend</code> slot to customize the prepend icon.
+          <span class="font-bold">VAlert tip :</span> Use <code>#prepend</code> slot to
+          customize the prepend icon.
           <template #append>
             <span class="text-2xl cursor-pointer i-carbon-arrow-right"></span>
           </template>
@@ -112,7 +107,6 @@ function resetAlerts() {
     </ComponentsDemoItem>
     <ComponentsDemoItem title="Bordered alert">
       <div class="flex flex-wrap gap-2">
-
         <VAlert border="top" variant="primary"> </VAlert>
         <VAlert border="left" variant="primary"> </VAlert>
         <VAlert border="bottom" variant="primary"> </VAlert>
@@ -125,20 +119,15 @@ function resetAlerts() {
         <VAlert border="top" smooth variant="info"> </VAlert>
         <VAlert border="left" smooth variant="warning"> </VAlert>
         <VAlert border="left" smooth variant="error"> </VAlert>
-
       </div>
     </ComponentsDemoItem>
     <ComponentsDemoItem title="Alert with title">
       <div class="flex flex-wrap gap-2 not-prose">
-
-        <VAlert  variant="success" title="Done successfully"> </VAlert>
-
-
+        <VAlert variant="success" title="Done successfully"> </VAlert>
       </div>
     </ComponentsDemoItem>
   </ComponentsDemo>
-    <PropsDoc :component-props="alertProps" />
-
+  <PropsDoc :component-props="alertProps" />
 </template>
 <route lang="yaml">
 meta:

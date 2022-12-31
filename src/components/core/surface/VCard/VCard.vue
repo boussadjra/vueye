@@ -1,11 +1,10 @@
 <script setup lang="ts">
 import cardProps from './cardProps'
 import { useElevation } from '~/composables/core/elevation'
-import { toPartialRefs } from '~/utils/helpers'
 
 const props = defineProps(cardProps)
 const slots = useSlots()
-const { shapeClass } = useElevation(toPartialRefs(props, ['elevation', 'outlined']))
+const { shapeClass } = useElevation(props)
 
 const classes = computed(() => [
   'card',

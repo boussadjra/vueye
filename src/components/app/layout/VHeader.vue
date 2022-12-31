@@ -1,18 +1,15 @@
 <script setup lang="ts">
 import { toggleDark } from '~/composables'
 import useEventsBus from '~/composables/core/eventBus'
-
+import myLogo from '~/assets/img/myLogo.jpg'
 const sidebarCollapsed = ref(false)
 const { emit } = useEventsBus()
 watch(sidebarCollapsed, (val) => {
   emit('sidebarCollapsed', val)
 })
 
-const { t, availableLocales, locale } = useI18n()
-// watch locale
-watch(locale, (val) => {
-  document.body.setAttribute('dir', val === 'ar' ? 'rtl' : 'ltr')
-})
+const { t } = useI18n()
+
 </script>
 <template>
   <!-- header component -->
@@ -35,18 +32,11 @@ watch(locale, (val) => {
       <button class="icon-btn mx-2 !outline-none" :title="t('button.toggle_dark')" @click="toggleDark()">
         <div i="carbon-sun dark:carbon-moon" />
       </button>
-      <select v-model="locale"
-        class="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-primary-900 dark:text-gray-300 dark:border-gray-500 focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 dark:focus:border-blue-300 focus:outline-none focus:ring">
-        <option v-for="locale in availableLocales" :value="locale">
-          {{ locale }}
-        </option>
-      </select>
-
+      <LanguageToggler />
       <button aria-label="notification"
         class="text-xl cursor-pointer i-carbon-notification hover:bg-slate-500 text-slate-600 dark:text-white" />
-
       <div class="flex items-center cursor-pointer">
-        <VAvatar corner="full" src="/imgs/myLogo.jpg" alt="logo" size="xs"></VAvatar>
+        <VAvatar corner="full" :src="myLogo" alt="logo" size="xs"></VAvatar>
       </div>
     </div>
   </header>

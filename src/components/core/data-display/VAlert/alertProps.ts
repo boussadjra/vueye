@@ -1,9 +1,8 @@
-import  { variantProps } from '~/composables/core/variant';
+import blockProps from '~/composables/core/props/blockProps';
+import { dismissProps } from '~/composables/core/dismiss';
 import outlinedProps from '~/composables/core/props/outlinedProps';
 import smoothProps from '~/composables/core/props/smoothProps';
-import { dismissProps } from '~/composables/core/dismiss';
-import blockProps from '~/composables/core/props/blockProps';
-
+import  { variantProps } from '~/composables/core/variant';
 
 const alertProps={
     ...variantProps,

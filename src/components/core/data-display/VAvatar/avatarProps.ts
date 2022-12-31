@@ -7,8 +7,7 @@ const avatarProps={
     src: {
         type: String,
         default: '',
-        description: 'Set the image source of the avatar',
-        
+        description: 'Set the image source of the avatar',  
     },
     alt: {
         type: String,
