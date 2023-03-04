@@ -23,7 +23,7 @@ useHead({
 }
 
 .primary.hoverable {
-  @apply hover: bg-primary-600
+  @apply hover:bg-primary-600
 }
 
 .secondary {
@@ -31,7 +31,7 @@ useHead({
 }
 
 .secondary.hoverable {
-  @apply hover: bg-secondary-600
+  @apply hover:bg-secondary-600
 }
 
 .info {
@@ -39,7 +39,7 @@ useHead({
 }
 
 .info.hoverable {
-  @apply hover: bg-blue-600
+  @apply hover:bg-blue-600
 }
 
 .warning {
@@ -47,7 +47,7 @@ useHead({
 }
 
 .warning.hoverable {
-  @apply hover: bg-yellow-600
+  @apply hover:bg-yellow-600
 }
 
 .error {
@@ -55,6 +55,6 @@ useHead({
 }
 
 .error.hoverable {
-  @apply hover: bg-red-600
+  @apply hover:bg-red-600
 }
 </style>
