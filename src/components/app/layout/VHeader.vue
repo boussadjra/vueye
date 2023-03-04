@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { toggleDark } from '~/composables'
 import useEventsBus from '~/composables/core/eventBus'
-import myLogo from '~/assets/img/myLogo.jpg'
+import myLogo from '~/assets/img/mylogo.jpg'
 const sidebarCollapsed = ref(false)
 const { emit } = useEventsBus()
 watch(sidebarCollapsed, (val) => {
