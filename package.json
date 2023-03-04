@@ -2,6 +2,7 @@
   "name": "vueye",
   "private": true,
   "packageManager": "pnpm@7.0.0",
+  "type": "module",
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --host",

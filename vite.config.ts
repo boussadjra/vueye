@@ -1,27 +1,33 @@
-import path from 'path'
-import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
-import generateSitemap from 'vite-ssg-sitemap'
-import Layouts from 'vite-plugin-vue-layouts'
-import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
-// import Markdown from 'vite-plugin-md'
-import { VitePWA } from 'vite-plugin-pwa'
+import Components from 'unplugin-vue-components/vite'
+import {
+  DirResolverHelper
+} from 'vite-auto-import-resolvers'
+import Layouts from 'vite-plugin-vue-layouts'
+import Pages from 'vite-plugin-pages'
+import Unocss from 'unocss/vite'
+import UnocssIcons from '@unocss/preset-icons'
+import Vue from '@vitejs/plugin-vue'
 import VueI18n from '@intlify/unplugin-vue-i18n/vite'
+import VueTypeImports from 'vite-plugin-vue-type-imports'
+import { defineConfig } from 'vite'
+import generateSitemap from 'vite-ssg-sitemap'
+import path from 'path'
+
+// import Markdown from 'vite-plugin-md'
+
+
 // import Inspect from 'vite-plugin-inspect'
 // import Inspector from 'vite-plugin-vue-inspector'
 // import Prism from 'markdown-it-prism'
 // import LinkAttributes from 'markdown-it-link-attributes'
-import VueTypeImports from 'vite-plugin-vue-type-imports'
+
 
 // import UnoCSS from 'unocss'
-import Unocss from 'unocss/vite'
-import UnocssIcons from '@unocss/preset-icons'
 
-import {
-  DirResolverHelper
-} from 'vite-auto-import-resolvers'
+
+
+
 
 export default defineConfig({
   resolve: {
@@ -89,34 +95,6 @@ export default defineConfig({
 
 
 
-    // https://github.com/antfu/vite-plugin-pwa
-    VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'safari-pinned-tab.svg'],
-      manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
-        theme_color: '#ffffff',
-        icons: [
-          {
-            src: '/pwa-192x192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-          {
-            src: '/pwa-512x512.png',
-            sizes: '512x512',
-            type: 'image/png',
-            purpose: 'any maskable',
-          },
-        ],
-      },
-    }),
 
     // https://github.com/intlify/bundle-tools/tree/main/packages/vite-plugin-vue-i18n
     VueI18n({
@@ -126,7 +104,9 @@ export default defineConfig({
       include: [path.resolve(__dirname, 'locales/**')],
     }),
   ],
-
+  ssr: {
+    noExternal: [/vue-i18n/],
+  },
   // https://github.com/antfu/vite-ssg
   ssgOptions: {
     script: 'async',

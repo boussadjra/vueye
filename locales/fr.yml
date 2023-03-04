@@ -53,3 +53,29 @@ sidebar:
   projects: Projets
   reports: Rapports
   team: Équipe
+features:
+  name: Caractéristiques
+  using-the-new-tools:
+    title: Utilisation des nouveaux outils
+    description: Utilisation des nouvelles versions et des nouveaux outils tels que Vue 3, Vite 2, pnpm, ESBuild
+  file-based-routing:
+    title: Routage basé sur les fichiers
+    description: Utilisation du plugin vite-plugin-pages pour créer un routage basé sur les fichiers
+  components-auto-importing:
+    title: Importation automatique de composants
+    description: Utilisation du plugin unplugin-vue-components pour importer automatiquement des composants
+  state-management-via-pinia:
+    title: Gestion de l'état via Pinia
+    description: Gérez votre état avec le nouvel outil Pinia
+  layout-system:
+    title: Système de mise en page
+    description: Le plugin vite-plugin-vue-layouts vous aide à créer des mises en page
+  use-icons-from-carbon-icons:
+    title: Utiliser des icônes de carbon-icons
+    description: Utilisation du plugin unplugin-icons pour utiliser des icônes de carbon-icons
+  i18n-ready:
+    title: Prêt pour l'i18n
+    description: Le plugin vue-i18n est utilisé pour prendre en charge l'i18n basé sur les fichiers YAML
+  other-tools:
+    title: Autres outils
+    description: ... et bien d'autres outils tels que TypeScript, Prettier, ESLint, etc.

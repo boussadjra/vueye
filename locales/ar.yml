@@ -51,3 +51,30 @@ sidebar:
   projects: المشاريع
   reports: التقارير
   team: الفريق
+features:
+  name: الميزات
+  using-the-new-tools:
+    title: استخدام الأدوات الجديدة
+    description: استخدام الإصدارات الجديدة والأدوات الجديدة مثل Vue 3 و Vite 2 و pnpm و ESBuild
+  file-based-routing:
+    title: توجيه قائمة الملفات
+    description: استخدام مكون إضافي vite-plugin-pages لإنشاء توجيه قائمة الملفات
+  components-auto-importing:
+    title: تلقائي استيراد المكونات
+    description: استخدام مكون إضافي unplugin-vue-components لتلقائي استيراد المكونات
+  state-management-via-pinia:
+    title: إدارة الحالة باستخدام Pinia
+    description: إدارة الحالة الخاصة بك باستخدام الأداة الجديدة Pinia
+  layout-system:
+    title: نظام التخطيط
+    description: يساعدك مكون إضافي vite-plugin-vue-layouts على إنشاء تخطيطات
+  use-icons-from-carbon-icons:
+    title: استخدام الرموز من رموز الكربون
+    description: استخدام مكون إضافي unplugin-icons لاستخدام الرموز من رموز الكربون
+  i18n-ready:
+    title: جاهز للدعم الدولي
+    description: يتم استخدام مكون إضافي vue-i18n لدعم الدعم الدولي بناءً على ملفات YAML
+  other-tools:
+    title: أدوات أخرى
+    description: ... والعديد من الأدوات الأخرى مثل TypeScript و Prettier و ESLint ، وما إلى ذلك
+

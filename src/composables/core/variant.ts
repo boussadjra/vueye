@@ -48,17 +48,9 @@ export const variantProps = {
 }
 
 export default function useVariant(props: any) {
+  
   const classes = computed(() => `${props.variant}`)
-  console.log('props.variant ', props)
-  watch(
-    () => props,
-    (val) => {
-      console.log('props ', val)
-    },
-    {
-      deep: true,
-    },
-  )
+
   return {
     variantClasses: classes,
     variantStyle: computed(() => ({

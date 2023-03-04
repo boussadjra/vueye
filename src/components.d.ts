@@ -20,7 +20,6 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TreeNode: typeof import('./components/app/utils/TreeNode.vue')['default']
-    TreeNode2: typeof import('./components/app/utils/TreeNode2.vue')['default']
     VAlert: typeof import('./components/core/data-display/VAlert/VAlert.vue')['default']
     VAvatar: typeof import('./components/core/data-display/VAvatar/VAvatar.vue')['default']
     VAvatarGroup: typeof import('./components/core/data-display/VAvatar/VAvatarGroup.vue')['default']

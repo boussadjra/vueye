@@ -17,7 +17,7 @@ const props = defineProps(btnProps)
 
 
 const { variantClasses, variantStyle } = useVariant(props)
-console.log('btn props ',props)
+
 const { sizeClasses } = useSize(props)
 const { loadingClass } = useLoading(props)
 const { cornerClass } = useCorner(props)
