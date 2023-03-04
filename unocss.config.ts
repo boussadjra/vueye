@@ -11,7 +11,6 @@ import {
 
 export default defineConfig({
   shortcuts: [
-    // {'btn': 'px-4 py-1 rounded inline-block bg-teal-600 text-white cursor-pointer hover:bg-teal-700 disabled:cursor-default disabled:bg-gray-600 disabled:opacity-50'},
     {
       'icon-btn':
                 'inline-block cursor-pointer select-none opacity-75 transition duration-200 ease-in-out hover:opacity-100 hover:text-teal-600',
@@ -59,12 +58,6 @@ export default defineConfig({
         800: '#731239',
         900: '#420A28',
 
-        // 50: '#f2f6f9',
-        // 100: '#d5daec',
-        // 200: '#B4BDDD',
-        // 300: '#0B3954',
-        // 400: '#072536',
-        // 500: '#051A1E',
       },
     },
   },

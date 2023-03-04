@@ -14,21 +14,6 @@ import { defineConfig } from 'vite'
 import generateSitemap from 'vite-ssg-sitemap'
 import path from 'path'
 
-// import Markdown from 'vite-plugin-md'
-
-
-// import Inspect from 'vite-plugin-inspect'
-// import Inspector from 'vite-plugin-vue-inspector'
-// import Prism from 'markdown-it-prism'
-// import LinkAttributes from 'markdown-it-link-attributes'
-
-
-// import UnoCSS from 'unocss'
-
-
-
-
-
 export default defineConfig({
   resolve: {
     alias: {

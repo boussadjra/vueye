@@ -19,7 +19,6 @@ const selected = ref(0);
 const emit = defineEmits(['update:modelValue'])
 
 watch(selected, (newVal) => {
-    // console.log("wacth ", selected.value);
     emit('update:modelValue', newVal);
 }, {
     immediate: true

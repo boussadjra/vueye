@@ -18,9 +18,6 @@ const componentProps = computed(() => {
   }
 })
 
-console.log('--------componentProps------------')
-console.log(componentProps.value.append.type.name)
-console.log('--------------------')
 </script>
 <template>
   <div class="px-16 py-8 w-full">
