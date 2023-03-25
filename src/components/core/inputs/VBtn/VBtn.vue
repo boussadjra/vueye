@@ -1,10 +1,4 @@
-
-
 <script setup lang="ts">
-/**
- * button component
- * @displayName VBtn
- */
 
 import { useCorner } from '~/composables/core/corner';
 import { useLoading } from '~/composables/core/loading';

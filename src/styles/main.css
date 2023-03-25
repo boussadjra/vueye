@@ -37,12 +37,12 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
 /**
   * body rtl
   */
- body[dir='rtl'],  body[dir='rtl'] #app {
+ body[dir='rtl'],  body[dir='rtl'] #app, .ar {
   font-family: 'ReadexPro', sans-serif!important;
 
 }
@@ -203,7 +203,9 @@ margin-bottom:40px;
 
 
 
-
+.centered {
+  @apply flex justify-center items-center
+}
 
 
 

@@ -21,7 +21,7 @@ export const variantProps = {
     type: String,
     default: '',
     validator: (value: string) => {
-      // test if color is hexa or rgb with regex
+      
       const isColor = isValidColor(value)
       if (!isColor || value) {
         console.warn(`${value} is not a valid color`)
@@ -35,7 +35,7 @@ export const variantProps = {
     type: String,
     default: '',
     validator: (value: string) => {
-      // test if color is hexa or rgb with regex
+      
       const isColor = isValidColor(value)
       if (!isColor || value) {
         console.warn(`${value} is not a valid color`)

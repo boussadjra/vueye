@@ -1,7 +1,6 @@
+import { disabledProps, labelProps, variantProps } from '~/composables'
+
 import type { PropType } from 'vue'
-import labelProps from '~/composables/core/props/labelProps'
-import disabledProps from '~/composables/core/props/disabledProps'
-import { variantProps } from '~/composables/core/variant'
 
 type CheckboxSize = 'sm' | 'md' | 'lg' | 'xl'
 

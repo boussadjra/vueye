@@ -1,7 +1,6 @@
+import { disabledProps, labelProps, variantProps } from '~/composables'
+
 import type { PropType } from 'vue'
-import labelProps from '~/composables/core/props/labelProps'
-import disabledProps from '~/composables/core/props/disabledProps'
-import { variantProps } from '~/composables/core/variant'
 
 type radioSize = 'sm' | 'md' | 'lg' | 'xl'
 
@@ -11,8 +10,7 @@ const radioProps = {
 
   variant: {
     ...variantProps.variant,
-    // default: 'primary',
-   
+
   },
   id: {
     type: String,

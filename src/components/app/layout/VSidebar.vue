@@ -45,6 +45,10 @@ const sidebarItems = computed(() => [
     path: '/components',
     children: [
       {
+        title: 'Accordions',
+        path: '/components/accordions',
+      },
+      {
         title: 'Alerts',
         path: '/components/alerts',
       },
@@ -139,7 +143,7 @@ onMounted(() => {
                 :class="`${currentIndex === index ? 'bg-gray-100 dark:bg-primary-700 ' : ''} `">
                 <span :class="`${sidebarCollapsed ? 'justify-center' : ''}
                                   ${currentIndex === index ? 'bg-gray-200 dark:bg-primary-700' : ''}
-                sidebar-item block py-4  px-4 flex items-center rtl:space-x-reverse space-x-2 cursor-pointer  decoration-none  leading-5  group  focus:outline-none  transition duration-150 ease-in-out`"
+                sidebar-item block py-4  px-4 flex items-center text-gray-600 dark:text-gray-300 rtl:space-x-reverse space-x-2 cursor-pointer  decoration-none  leading-5  group  focus:outline-none  transition duration-150 ease-in-out`"
                   @click="setCurrentIndex(index)">
                   <span :class="`${item.icon} text-lg block`" />
 

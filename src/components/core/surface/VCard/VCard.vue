@@ -9,7 +9,7 @@ const { shapeClass } = useElevation(props)
 const classes = computed(() => [
   'card',
   shapeClass.value,
-  props.outlined ? 'bg-transparent' : ' bg-white  dark:bg-primary-850',
+  props.outlined ? 'bg-transparent' : ' bg-white dark:bg-primary-850',
   props.block ? 'w-full' : 'max-w-lg',
   {
     'card--media-aside': props.mediaAside,
@@ -28,7 +28,7 @@ const classes = computed(() => [
         </div>
         <slot />
       </div>
-      <div v-if="slots.footer" class="px-6 pt-3 pb-2">
+      <div v-if="slots.footer" class="px-6 pt-3 pb-3 ">
         <slot name="footer" />
       </div>
     </div>

@@ -162,7 +162,7 @@ const features = computed(() => [
         <div class="flex flex-col gap-2">
           <div class="flex flex-wrap gap-2">
             <VBtn>Cancel</VBtn>
-            <VBtn variant="primary"> إرسال </VBtn>
+            <VBtn class="ar" variant="primary"> إرسال </VBtn>
             <VBtn variant="secondary" smooth> Envoyer </VBtn>
             <VBtn variant="info" smooth> More details </VBtn>
             <VBtn size="sm" variant="primary" outlined icon="i-carbon-location" />
@@ -252,9 +252,7 @@ const features = computed(() => [
   </main>
 </template>
 <style>
-.right-side {
-  @apply transform rotate-0 transition-transform duration-300 ease-in-out;
-}
+
 </style>
 <route lang="yaml">
 meta:

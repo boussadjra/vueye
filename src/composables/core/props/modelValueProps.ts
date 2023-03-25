@@ -1,6 +1,6 @@
 
 
-const modelValueProps = {
+export const modelValueProps = {
     modelValue: {
         type: [String, Number, Object, Boolean],
         default: null,
@@ -8,5 +8,3 @@ const modelValueProps = {
     },
 
 }
-
-export default modelValueProps

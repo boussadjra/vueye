@@ -1,5 +1,4 @@
-import { cornerProps } from "~/composables/core/corner";
-import { sizeProps } from "~/composables/core/size";
+import { cornerProps, sizeProps } from "~/composables";
 
 const avatarProps={
     ...cornerProps,

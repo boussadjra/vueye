@@ -1,4 +1,4 @@
-r<script setup lang="ts">
+<script setup lang="ts">
 function beforeEnter(element: HTMLElement) {
   requestAnimationFrame(() => {
     if (!element.style.height)

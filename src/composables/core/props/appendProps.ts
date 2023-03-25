@@ -1,4 +1,4 @@
-const appendProps = {
+export const appendProps = {
   prepend: {
     type: String,
     default: "",
@@ -9,6 +9,4 @@ const appendProps = {
     default: "",
     description: "Append icon name, it should start with <code>i-carbon-</code> prefix",
   },
-}
-
-export default appendProps;
+};

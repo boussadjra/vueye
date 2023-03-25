@@ -1,8 +1,4 @@
-import  { variantProps } from '~/composables/core/variant';
-import outlinedProps from '~/composables/core/props/outlinedProps';
-import smoothProps from '~/composables/core/props/smoothProps';
-import contentProps from '~/composables/core/props/contentProps';
-
+import  { contentProps, outlinedProps, smoothProps, variantProps } from '~/composables';
 
 const badgeProps={
     ...variantProps,

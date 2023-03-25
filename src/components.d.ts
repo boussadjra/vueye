@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     BurgerMenuBtn: typeof import('./components/app/utils/BurgerMenuBtn.vue')['default']
+    CardStatsHeader: typeof import('./pages/dashboard/_components/CardStatsHeader.vue')['default']
     CollapseTransition: typeof import('./components/app/utils/CollapseTransition.vue')['default']
     ComponentsDemo: typeof import('./components/app/ComponentsDemo.vue')['default']
     ComponentsDemoItem: typeof import('./components/app/ComponentsDemoItem.vue')['default']
@@ -20,6 +21,7 @@ declare module '@vue/runtime-core' {
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     TreeNode: typeof import('./components/app/utils/TreeNode.vue')['default']
+    VAccordion: typeof import('./components/core/surface/VAccordion/VAccordion.vue')['default']
     VAlert: typeof import('./components/core/data-display/VAlert/VAlert.vue')['default']
     VAvatar: typeof import('./components/core/data-display/VAvatar/VAvatar.vue')['default']
     VAvatarGroup: typeof import('./components/core/data-display/VAvatar/VAvatarGroup.vue')['default']

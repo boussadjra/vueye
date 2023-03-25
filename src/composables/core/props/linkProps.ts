@@ -1,4 +1,4 @@
-const linkProps = {
+export const linkProps = {
     link: {
         type: Boolean,
         default: false,
@@ -9,6 +9,4 @@ const linkProps = {
         default: "",
         description: "The route to link to",
     },
-}
-
-export default linkProps;
+};
