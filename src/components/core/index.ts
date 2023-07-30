@@ -11,4 +11,3 @@ import VRadio from './inputs/VRadio/VRadio.vue'
 import VTextField from './inputs/VTextField/VTextField.vue'
 
 export { VAccordion, VAlert, VAvatarGroup, VAvatar, VBadge, VBtn, VBtnGroup, VCheckbox,VRadio, VTextField,VBreadcrumb,}
-

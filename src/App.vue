@@ -1,6 +1,5 @@
 <script setup lang="ts">
 
-import { isDark } from '~/composables'
 
 useHead({
   title: 'Vitesse',

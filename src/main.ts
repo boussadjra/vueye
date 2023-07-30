@@ -2,20 +2,18 @@ import '@unocss/reset/tailwind.css'
 import './styles/main.css'
 import 'uno.css'
 
+import { createRouter, createWebHistory } from 'vue-router'
+
 import App from './App.vue'
-import { ViteSSG } from 'vite-ssg'
-import { autoAnimatePlugin } from '@formkit/auto-animate/vue'
+import { createApp } from 'vue'
 import generatedRoutes from '~pages'
+import i18n from './modules/i18n'
 import { setupLayouts } from 'virtual:generated-layouts'
 
 const routes = setupLayouts(generatedRoutes)
 
-export const createApp = ViteSSG(
-  App,
-  { routes, base: import.meta.env.BASE_URL },
-  (ctx) => {
-    ctx.app.use(autoAnimatePlugin)
-    // install all modules under `modules/`
-    Object.values(import.meta.globEager('./modules/*.ts')).forEach((i:any) => i.install?.(ctx))
-  },
-)
+
+export const app = createApp(App)
+    .use(createRouter({ routes, history: createWebHistory() }))
+    .use(i18n)
+    .mount('#app')

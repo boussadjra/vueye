@@ -72,7 +72,7 @@ features:
     title: استخدام أيقونات مكتبة كربون
     description: استخدام ملحق unplugin-icons لاستخدام أيقونات مكتبة كربون
   i18n-ready:
-    title: جاهز للدعم مختلف لغات العالم
+    title: جاهز لدعم مختلف لغات العالم
     description: يستخدم ملحق vue-i18n لدعم اللغات بناءً على ملفات YAML
   other-tools:
     title: أدوات أخرى
